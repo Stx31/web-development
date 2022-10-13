@@ -1,0 +1,65 @@
+
+
+body {
+    margin: 0%;
+    font-family: 'Rob', sans-serif;
+    background-color: rgb(215, 128, 28);
+}
+
+
+button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(114, 45, 2);
+}
+
+#nuestros-programas {
+    background-color: rgb(30, 30, 30, );
+    color: white;
+    text-align: center;
+}
+
+#nuestros-programas.container {     
+    padding: 150px 12px;
+}
+
+#nuestros-programas .carta {
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    
+}
+
+.carta:nth-child(1) {
+  background-color: rgb(64, 124, 161);
+
+
+}
+
+.carta:nth-child(2) {
+    background-color: rgb(34, 190, 23);
+    
+}
+#nuestros-programas .programas {
+    display: flex;
+    justify-content: center;}
+
+h2{
+    color: rgb(255, 0, 0);
+}
+h3{
+    color: rgb(0, 0, 0);
+}
+h1{
+    color: rgb(0, 0, 0);
+}
+
+p{
+    color: rgb(255, 255, 255);
+    font-size: 0.5cm;
+    text-align: center;
+   margin-left: 40px;
+}
+
