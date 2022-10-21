@@ -1,65 +1,62 @@
+p {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 
-
-body {
-    margin: 0%;
-    font-family: 'Rob', sans-serif;
-    background-color: rgb(215, 128, 28);
 }
 
+p {
+    margin-left: 200px;
+    padding: 80px, 90px;
+    width: 500px;
+    height: 175px;
+    margin-left: 1px;
+    margin-top: -38px;
+    text-align: justify;
+    font-size: "10";
+    color: rgb(239, 208, 168);
+    padding-left: 1px;
+
+}
+
+
+
+h2 {
+    background-color: rgb(255, 255, 255);
+
+    width: 500px;
+    height: 150px;
+    margin-left: 1px;
+    margin-top: -5px;
+    text-align: center;
+    font-size: "10";
+    padding-top: 3%;
+}
 
 button {
-    font-size: 1.5em;
-    padding: 10px 20px;
-    color: white;
-    background-color: rgb(114, 45, 2);
-}
 
-#nuestros-programas {
-    background-color: rgb(30, 30, 30, );
-    color: white;
-    text-align: center;
-}
-
-#nuestros-programas.container {     
-    padding: 150px 12px;
-}
-
-#nuestros-programas .carta {
-    background-position: center center;
-    background-size: cover;
-    padding: 50px 0px;
-    margin: 30px;
-    
-}
-
-.carta:nth-child(1) {
-  background-color: rgb(64, 124, 161);
-
+    margin-left: 200px;
+    margin-bottom: auto;
+    color: rgb(247, 247, 247);
+    background-color: rgb(245, 151, 97);
+    padding: 16px 40px;
+    border: 0px;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 
 }
 
-.carta:nth-child(2) {
-    background-color: rgb(34, 190, 23);
-    
-}
-#nuestros-programas .programas {
-    display: flex;
-    justify-content: center;}
+body {
+    background-color: rgb(244, 243, 192);
+    margin-left: 250px;
 
-h2{
-    color: rgb(255, 0, 0);
-}
-h3{
-    color: rgb(0, 0, 0);
-}
-h1{
-    color: rgb(0, 0, 0);
 }
 
-p{
-    color: rgb(255, 255, 255);
-    font-size: 0.5cm;
-    text-align: center;
-   margin-left: 40px;
+.line-1 {
+    height: 1px;
+    background-color: rgb(220, 244, 33);
+    margin-left: 27px;
+    margin-right: 27px;
 }
-
