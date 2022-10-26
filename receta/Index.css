@@ -1,14 +1,13 @@
 body {
     background-color: aqua;
-    display: flex;
- 
+    flex-direction: column;
 }
-button {
+
+.but1 {
     font-size: 15px;
     font-family: Arial;
     width: 140px;
     height: 50px;
-    border-width: 2px;
     color: rgb(255, 255, 255);
     border-color: #333029;
     font-weight: bold;
@@ -18,31 +17,26 @@ button {
     border-bottom-right-radius: 15px;
     background-color: rgb(102, 50, 0);
 }
-#caja1 {
-    background-color: rgba(255, 255, 255);
-    text-align: center;
-    width: 500px;
-    padding-bottom: 50px;
-    margin: 30px;
-}
 
 hr {
     height: 2px;
     width: 400px;
     color: rgb(235, 233, 218);
 }
+
 p {
     text-align: justify;
     padding: 20px;
     margin: auto;
     width: 50%;
 }
-#caja1 img{
+
+.caja img {
     width: 100%;
     margin-top: 0;
 }
 
-#caja2 {
+.caja2 {
     background-color: rgba(100, 151, 22);
     text-align: left;
     width: 500px;
@@ -51,7 +45,7 @@ p {
 
 }
 
-#textovrvd{
+.textovrvd {
     color: rgb(255, 255, 255);
     font-size: 30px;
     padding: 10px;
@@ -59,25 +53,89 @@ p {
     padding-left: 10%;
 }
 
-#ama{
+.ama {
     color: rgb(201, 212, 108);
     font-size: 30px;
     text-align: left;
-    padding-right: 170px;
-    
+    align-items: flex-end;
 }
 
-h5{
+h5 {
     color: white;
     text-align: right;
-    padding-right: 10%;
-   
+    text-align: right;
+    align-items: flex-end;
+
 }
-#xd{
+
+.xd {
     color: rgb(101, 149, 27);
-    background-color:rgb(101, 149, 27);
+    background-color: rgb(101, 149, 27);
     height: 2px;
     width: 400px;
- 
+
 }
-    
+
+header {
+    background-color: rgb(51, 51, 51);
+    height: 100%;
+    align-items: center;
+    color: aliceblue;
+
+}
+
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.but {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    border-color: rgb(51, 51, 51);
+    border-style: none;
+    width: 50vh;
+    height: 50px;
+}
+
+
+.caja {
+
+    background-color: rgba(255, 255, 255);
+    text-align: center;
+    width: 500px;
+    padding-bottom: 50px;
+    margin: 30px;
+}
+
+.but:hover {
+    background-color: rgb(6, 168, 109);
+}
+
+
+.aba {
+    background-color: rgb(51, 51, 51);
+    height: 90px;
+    color: aliceblue;
+    background-color: #333029;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.cajap {
+    display: flex;
+    flex-direction: row;
+}
