@@ -1,7 +1,56 @@
 body {
-    background-color: aqua;
-    flex-direction: column;
+    background-color: rgb(225, 217, 146);
 }
+
+footer {
+    background-color: rgb(51, 51, 51);
+    height: 50px;
+    color: aliceblue;
+    background-color: #333029;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+body,
+html {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.read1 {
+    color: aliceblue;
+   text-align: end;
+   justify-content: end;
+   margin: 1%;
+}
+
+
+.line {
+    height: 2px;
+    background-color: rgb(225, 232, 21);
+    margin: 10%;
+}
+
+p {
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* cotnenido */
 
 .but1 {
     font-size: 15px;
@@ -18,25 +67,18 @@ body {
     background-color: rgb(102, 50, 0);
 }
 
-hr {
-    height: 2px;
-    width: 400px;
-    color: rgb(235, 233, 218);
+.but1:hover {
+    background-color: rgb(239, 116, 0)
 }
 
-p {
-    text-align: justify;
-    padding: 20px;
-    margin: auto;
-    width: 50%;
-}
 
-.caja img {
+
+.box img {
     width: 100%;
     margin-top: 0;
 }
 
-.caja2 {
+.box2 {
     background-color: rgba(100, 151, 22);
     text-align: left;
     width: 500px;
@@ -45,7 +87,7 @@ p {
 
 }
 
-.textovrvd {
+.textgreen {
     color: rgb(255, 255, 255);
     font-size: 30px;
     padding: 10px;
@@ -53,54 +95,56 @@ p {
     padding-left: 10%;
 }
 
-.ama {
+.yellow {
     color: rgb(201, 212, 108);
     font-size: 30px;
     text-align: left;
     align-items: flex-end;
-}
-
-h5 {
-    color: white;
-    text-align: right;
-    text-align: right;
-    align-items: flex-end;
 
 }
+
 
 .xd {
-    color: rgb(101, 149, 27);
-    background-color: rgb(101, 149, 27);
+
+    background-color: rgb(233, 251, 206);
     height: 2px;
-    width: 400px;
-
+    margin: 10%;
+    
 }
 
-header {
-    background-color: rgb(51, 51, 51);
-    height: 100%;
+
+
+.link-container {
+
+    display: flex;
+    justify-content: center;
     align-items: center;
-    color: aliceblue;
-
 }
 
-
-a {
-    text-decoration: none;
-    color: aliceblue;
-}
-
-.but {
+.navbar {
     background-color: rgb(51, 51, 51);
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    padding: 0 15px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
     color: white;
     border-color: rgb(51, 51, 51);
     border-style: none;
-    width: 50vh;
-    height: 50px;
 }
 
+.navbar a:hover {
+    background-color: rgb(6, 168, 109);
+}
 
-.caja {
+.box {
 
     background-color: rgba(255, 255, 255);
     text-align: center;
@@ -109,33 +153,9 @@ a {
     margin: 30px;
 }
 
-.but:hover {
-    background-color: rgb(6, 168, 109);
-}
 
 
-.aba {
-    background-color: rgb(51, 51, 51);
-    height: 90px;
-    color: aliceblue;
-    background-color: #333029;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-* {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-}
-
-.cajap {
+.boxp {
     display: flex;
     flex-direction: row;
 }
