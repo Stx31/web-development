@@ -23,8 +23,6 @@ a {
 body,
 html {
     margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
 }
 
 .read1 {
@@ -84,9 +82,7 @@ html {
 .textgreen {
     color: rgb(255, 255, 255);
     font-size: 30px;
-    justify-content: start;
-    text-align: left;
-
+    text-align: left (20px) ;
 }
 
 
