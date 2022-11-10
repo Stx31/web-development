@@ -1,6 +1,7 @@
- function num(){
-    for (let index=1; index<=250; index++){
-        console.log(index)
+function num() {
+    for (let index = 1; index <= 250; index++) {
+        document.write(`${index}\n`)
     }
 }
 num();
+

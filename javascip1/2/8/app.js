@@ -1,20 +1,10 @@
-function combinar() {
+let n1 = parseInt(prompt("Introduzca un numero",""))
+let n2 = parseInt(prompt("Introduzca otro numero",""))
 
-    var primeracas = parseInt(document.getElementById("cas1").value)
-    var seguncas = parseInt(document.getElementById("cas2").value)
-
-    var combinacion = primeracas + seguncas;
-
-
-    console.log(combinacion);
-
+function sumarNumeros(n1,n2){
+    return n1+n2
 }
 
+let resultado = sumarNumeros(n1,n2)
 
-function restar(){
-    var primeracas = parseInt(document.getElementById("cas3").value)
-    var seguncas = parseInt(document.getElementById("cas4").value)
-
-    var combinacion = primeracas-seguncas;
-    console.log(combinacion)
-}
+console.log(resultado)
