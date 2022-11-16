@@ -1,0 +1,27 @@
+p {
+    color: tan;
+}
+
+button {
+    background-color: rgb(232, 228, 228);
+    height: 50px;
+    width: 50px;
+}
+
+h1{
+    color: brown;
+}
+
+.green{
+    color: green;
+    font-weight: 150;
+}
+
+.brown{
+    color: brown;
+    font-weight: 150;
+}
+
+#tree-container{
+    text-align: center;
+}
