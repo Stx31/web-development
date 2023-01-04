@@ -1,0 +1,40 @@
+.grid{
+    display: grid;
+    grid-template-areas:
+    "a b c"
+    "d e f"
+    "g h i";
+    justify-content: center;
+    align-items: center;
+}
+ .grid div{
+    height: 180px;
+    width: 180px;
+    font-size: 80px;
+    border: 1px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .flexbox {
+
+    display: flex;
+    justify-content: space-between;
+    align-items:  center;
+    max-width: 800px;
+    margin: 20px auto;
+ }
+
+ button{
+    padding: 20px;
+    font-size: 30px;
+     background-color: rgb(184, 46, 46);
+     box-shadow: none;
+     border-radius: 20px;
+ }
+
+ body{
+    background-color: aquamarine;
+ }
