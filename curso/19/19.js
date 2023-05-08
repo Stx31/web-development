@@ -19,3 +19,15 @@ console.log(people[1]); // "Velma"
 console.log(people[2]); // "Daphne"
 console.log(people[3]); // "Shaggy"
 console.log(people[4]); // "Fred"
+
+
+////////////////////////////////////-/////////////////////////////
+const secret = "babbyhippo"
+let guess  = prompt("enter the secreto code ");
+while(guess !== secret){
+    guess = prompt(" enter  the secret code ");
+}
+console.log("congrats  you got the code ;D")
+
+
+////////////////////////////////////-/////////////////////////////
