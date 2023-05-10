@@ -12,13 +12,16 @@
 }else if(input === 'new'){
     const newtodo = prompt('okey what is the new to do?')
     todos.push(newtodo);
-    console.log('${newtodo}added to the list !')
+    // $ = valor de la variable //
+    //tample string 
+    console.log(`${newtodo}added to the list !`)
 } else if(input === 'delete'){
     const  Index =prompt('ok enter index to delete ');
     const deleted = todos.splice(index, 1);
-    console.log('ok delete ${deleted[0]}');
+    console.log(`ok delete ${deleted[0]}`);
 }
  
     input= prompt(' que te gustaria hacer ?')
  }
  console.log ('ok quit the app ')
+  
