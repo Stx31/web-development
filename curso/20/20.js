@@ -97,3 +97,23 @@ function returnDay(num) {
   console.log(returnDay(0)); // Output: null
   console.log(returnDay(8)); // Output: null
   
+  //////////////////////// ejrs//////////////
+  const square = function(num) {
+    return num * num;
+  }
+
+  //////////////////////// higher order funcion /////////////////
+  let greet = function() { console.log("hi")}
+
+  function calltwice(funcion){ 
+    funcion()//we can call them if we put the number on the "()"
+    funcion()
+  }
+  function lought ( ){
+    console.log (" HAHAHAHAHHA  ")
+
+  }
+  calltwice(lought)
+  /////////////////// returning funcion////////////////////////
+
+  
