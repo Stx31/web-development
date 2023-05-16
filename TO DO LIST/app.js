@@ -13,7 +13,7 @@ addBtn.addEventListener("click", (e) => {
   if (text !== "") {
     const li = document.createElement("li");
     const p = document.createElement("p");
-    p.textContent = text;
+    p.textContent = text;asdasd
 
     li.appendChild(p);
     li.appendChild(addDeleteBtn());
