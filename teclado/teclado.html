@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Teclado Virtual</title>
+  <style>
+    .keyboard {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 5px;
+      margin-top: 20px;
+    }
+
+    .key {
+      background-color: lightgray;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="inputField">
+
+  <div class="keyboard">
+    <div class="key">1</div>
+    <div class="key">2</div>
+    <div class="key">3</div>
+    <div class="key">4</div>
+    <div class="key">5</div>
+    <div class="key">6</div>
+    <div class="key">7</div>
+    <div class="key">8</div>
+    <div class="key">9</div>
+    <div class="key">0</div>
+  </div>
+
+  <script>
+    const inputField = document.getElementById("inputField");
+    const keys = document.querySelectorAll(".key");
+
+    keys.forEach(key => {
+      key.addEventListener("click", () => {
+        inputField.value += key.textContent;
+      });
+    });
+  </script>
+</body>
+</html>
