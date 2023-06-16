@@ -1,0 +1,5 @@
+npm init = inicia proyecto de node 
+npm init  -y = acepta todo por defecto
+-p , --save-prod:
+-d, --save-dev
+-o , --save-optional
