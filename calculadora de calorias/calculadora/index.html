@@ -2,26 +2,8 @@
 <html>
 <head>
   <title>Calculadora de Binarios</title>
-  <script>
-    function calcular() {
-      var num1 = document.getElementById("num1").value;
-      var num2 = document.getElementById("num2").value;
-      var operador = document.getElementById("operador").value;
-      var resultado;
+  <script src="app.js"></script>
 
-      if (operador === "+") {
-        resultado = parseInt(num1, 2) + parseInt(num2, 2);
-      } else if (operador === "-") {
-        resultado = parseInt(num1, 2) - parseInt(num2, 2);
-      } else if (operador === "*") {
-        resultado = parseInt(num1, 2) * parseInt(num2, 2);
-      } else if (operador === "/") {
-        resultado = parseInt(num1, 2) / parseInt(num2, 2);
-      }
-
-      document.getElementById("resultado").value = resultado.toString(2);
-    }
-  </script>
 </head>
 <body>
   <h1>Calculadora de Binarios</h1>
