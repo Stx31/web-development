@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generador de Emails</title>
+  <script>
+    function generarEmail() {
+      var nombre = document.getElementById("nombre").value;
+      var apellido = document.getElementById("apellido").value;
+      var dominio = document.getElementById("dominio").value;
+
+      var email = nombre.toLowerCase() + "." + apellido.toLowerCase() + "@" + dominio;
+
+      document.getElementById("resultado").value = email;
+    }
+  </script>
+</head>
+<body>
+  <h1>Generador de Emails</h1>
+  <input type="text" id="nombre" placeholder="Nombre">
+  <input type="text" id="apellido" placeholder="Apellido">
+  <input type="text" id="dominio" placeholder="Dominio">
+  <button onclick="generarEmail()">Generar Email</button>
+  <input type="text" id="resultado" placeholder="Resultado" readonly>
+</body>
+</html>
