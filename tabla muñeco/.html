@@ -6,8 +6,10 @@
 <body>
   <script>
     const array = ['a', 'b', 'c', 'x', 'd', 'e', 'f']; 
-
-    let position =  1 ; 
+    function randomIntFromInterval(min, max) { // min and max included 
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
+    let position =   randomIntFromInterval( 0 , array.length -1) 
 
     
     function displayArray() {

@@ -1,39 +1,45 @@
 var cruz = 0
 
 
-function generarTabla() {
-   
-    const filas = parseInt(document.getElementById('inputFilas').value);
-    const columnas = parseInt(document.getElementById('inputColumnas').value);
+function moveForward() {
+  console.log("for")
+}
+function moveBackward() {
+  console.log("ba")
 
-    const tablaContainer = document.getElementById('tablaContainer');
-
-    const tabla = document.createElement('table');
-
-    for (let i = 0; i < filas; i++) {
-        const fila = document.createElement('tr');
-        
-        for (let j = 0; j < columnas; j++) {
-            const celda = document.createElement('td');
-            celda.innerHTML = `<div class = "celda"> x </div> `;
-            fila.appendChild(celda);
-        }   
-
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'ArrowRight') {
-              moveForward();
-            } else if (event.key === 'ArrowLeft') {
-              moveBackward();
-            }
-
-        tabla.appendChild(fila);
-    } 
-      
-    
-    
-
-    tablaContainer.appendChild(tabla);
 }
 
 
+
+
+//function generarTabla() {
+  const filas = parseInt(document.getElementById('inputFilas').value);
+  const columnas = parseInt(document.getElementById('inputColumnas').value);
+  for (let i = 0; i < filas; i++) {
+    const fila = document.createElement('tr');
+    for (let j = 0; j < columnas; j++) {
+      const celda = document.createElement('td');
+      const div = `<div class = "celda"> x </div> `;
+      celda.innerHTML = div;
+      console.log(div)
+      fila.appendChild(celda);
+    }
+
+  }
+//}
+
+document.addEventListener(
+  'keydown',
+  (event) => {
+  
+    if (event.key === 'ArrowRight') {
+      moveForward();
+    } else if (event.key === 'ArrowLeft') {
+      moveBackward();
+    }
+  }
+)
+
+
 generarTabla()
+ function generarTabla :
