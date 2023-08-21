@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendador de Películas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Recomendador de Películas</h1>
+    <label for="genre">Selecciona un género:</label>
+    <select id="genre">
+        <option value="action">Acción</option>
+        <option value="comedy">Comedia</option>
+        <option value="drama">Drama</option>
+        <option value="sci-fi">Ciencia Ficción</option>
+    </select>
+    <button onclick="getRecommendation()">Obtener Recomendación</button>
+    <h2>Recomendación:</h2>
+    <p id="recommendation"></p>
+
+    <script>
+        const movies = {
+            action: ["Pelicula de Acción 1", "Pelicula de Acción 2", "Pelicula de Acción 3"],
+            comedy: ["Pelicula de Comedia 1", "Pelicula de Comedia 2", "Pelicula de Comedia 3"],
+            drama: ["Pelicula de Drama 1", "Pelicula de Drama 2", "Pelicula de Drama 3"],
+            "sci-fi": ["Pelicula de Ciencia Ficción 1", "Pelicula de Ciencia Ficción 2", "Pelicula de Ciencia Ficción 3"]
+        };
+
+        function getRecommendation() {
+            const selectedGenre = document.getElementById("genre").value;
+            const moviesForGenre = movies[selectedGenre];
+            
+            if (moviesForGenre) {
+                const randomIndex = Math.floor(Math.random() * moviesForGenre.length);
+                const recommendation = moviesForGenre[randomIndex];
+                document.getElementById("recommendation").textContent = recommendation;
+            } else {
+                document.getElementById("recommendation").textContent = "No hay recomendaciones para este género.";
+            }
+        }
+    </script>
+</body>
+</html>
