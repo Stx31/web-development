@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Reloj Mundial</title>
+</head>
+<body>
+    <div class="clock">
+        <div class="time" id="time"></div>
+        <div class="location">
+            <label for="timezone">Selecciona una zona horaria:</label>
+            <select id="timezone" onchange="updateTimezone(this.value)">
+                <option value="America/New_York">Nueva York</option>
+                <option value="Europe/London">Londres</option>
+                <option value="Asia/Tokyo">Tokio</option>
+            
+            </select>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
