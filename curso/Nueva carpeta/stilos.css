@@ -1,0 +1,41 @@
+/* todos los label del mismo tamaño */
+
+label {
+    display: inline-flex;
+    width: 220px;
+}
+
+
+/* color gris para el select y el input */
+
+.colorgris {
+    background-color: rgb(182, 180, 180);
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: #777
+}
+
+.form-control.success input {
+    border-color: #2ecc71
+}
+
+.form-control.error input {
+    border-color: #e74c3c
+}
+
+
+/* esconder el mensaje */
+small {
+    color: #e74c3c;
+    bottom: 0px;
+    left: 0px;
+    visibility: hidden;
+}
+
+
+/* visibilizar el mensaje */
+.form-control.error small {
+    visibility: visible;
+}

@@ -10,7 +10,7 @@ mongoose.connect('mongodb://localhost:27017/relationshipDemo', { useNewUrlParser
         console.log(err)
     })
 
-
+// producto  nombre precio y una temporada válida de acuerdo con las restricciones  en el esquema.
 const productSchema = new Schema({
     name: String,
     price: Number,
@@ -25,7 +25,7 @@ const farmSchema = new Schema({
     city: String,
     products: [{ type: Schema.Types.ObjectId, ref: 'Product' }]
 })
-
+//crear y actualizar relaciones entre granjas y productos.
 const Product = mongoose.model('Product', productSchema);
 const Farm = mongoose.model('Farm', farmSchema);
 

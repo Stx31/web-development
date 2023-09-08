@@ -74,7 +74,7 @@ app.post('/farms/:id/products', async (req, res) => {
 
 
 
-// PRODUCT ROUTES
+// RUTAS DE PRODUCTOS
 
 app.get('/products', async (req, res) => {
     const { category } = req.query;

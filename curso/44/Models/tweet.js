@@ -12,7 +12,8 @@ mongoose.connect('mongodb://localhost:27017/relationshipDemo', { useNewUrlParser
 
 const userSchema = new Schema({
     username: String,
-    age: Number
+    age: Number,
+    color:String
 })
 
 const tweetSchema = new Schema({
@@ -27,7 +28,7 @@ const Tweet = mongoose.model('Tweet', tweetSchema);
 // const makeTweets = async () => {
 //     // const user = new User({ username: 'chickenfan99', age: 61 });
 //     const user = await User.findOne({ username: 'chickenfan99' })
-//     const tweet2 = new Tweet({ text: 'bock bock bock my chickens make noises', likes: 1239 });
+//     const tweet2 = new Tweet({ text: 'dinosarui con ppepino', likes: 1239 });
 //     tweet2.user = user;
 //     tweet2.save();
 // }
