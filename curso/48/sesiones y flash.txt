@@ -1,0 +1,7 @@
+sesiones :
+Las sesiones son una forma de mantener el estado del usuario en una aplicación web. En una aplicación web típica, HTTP es un protocolo sin estado,
+ lo que significa que cada solicitud HTTP es independiente y no almacena información sobre las solicitudes anterior
+es del usuario.
+ flash :
+Los mensajes flash son un mecanismo utilizado en las aplicaciones web para mostrar mensajes temporales al usuario, como confirmaciones, errores o mensajes de éxito. Estos mensajes se muestran
+ generalmente una vez y luego se eliminan automáticamente en la siguiente solicitud
