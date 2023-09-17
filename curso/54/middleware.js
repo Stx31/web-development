@@ -11,6 +11,7 @@ module.exports.isLoggedIn = (req, res, next) => {
     }
     next();
 }
+//Esta función verifica si un usuario ha iniciado sesión antes de permitir que continúe con una solicitud
 
 module.exports.validateCampground = (req, res, next) => {
     const { error } = campgroundSchema.validate(req.body);
@@ -22,6 +23,7 @@ module.exports.validateCampground = (req, res, next) => {
         next();
     }
 }
+//Esta función valida los datos enviados en el cuerpo de una solicitud para la creación o edición 
 
 module.exports.isAuthor = async (req, res, next) => {
     const { id } = req.params;
@@ -32,7 +34,7 @@ module.exports.isAuthor = async (req, res, next) => {
     }
     next();
 }
-
+//Esta función verifica si el usuario que está realizando una solicitud es el autor del campamento.
 module.exports.isReviewAuthor = async (req, res, next) => {
     const { id, reviewId } = req.params;
     const review = await Review.findById(reviewId);
@@ -42,7 +44,7 @@ module.exports.isReviewAuthor = async (req, res, next) => {
     }
     next();
 }
-
+//esta función verifica si el usuario que está realizando una solicitud es el autor de una revisión
 module.exports.validateReview = (req, res, next) => {
     const { error } = reviewSchema.validate(req.body);
     if (error) {
@@ -52,3 +54,4 @@ module.exports.validateReview = (req, res, next) => {
         next();
     }
 }
+//esta función valida los datos enviados en el cuerpo de una solicitud, pero esta vez se utiliza un esquema de validación definido en reviewSchema para validar los datos de la revisión.
