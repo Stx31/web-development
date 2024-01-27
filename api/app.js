@@ -1,30 +1,28 @@
-const apiKey = "0d1167c50db644714990d8d7ef02e836"; 
+function searchWeather() {
+    const apiKey = 'd9fb6ff62647eedeebd9d9f45eae280c';
+    const cityInput = document.getElementById('cityInput');
+    const cityName = cityInput.value;
 
-const searchButton = document.getElementById("search");
-const cityInput = document.getElementById("city");
-const resultDiv = document.getElementById("result");
+    
+    if (cityName.trim() === '') {
+        alert('Please enter a city name');
+        return;
+    }
 
-searchButton.addEventListener("click", () => {
-  const city = cityInput.value;
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`)
+        .then(response => response.json())
+        .then(data => {
+            
+            document.querySelector('.temp').innerText = `${data.main.temp}°C`;
+            document.querySelector('.city').innerText = data.name;
+            document.querySelector('.humidity').innerText = `${data.main.humidity}%`;
+            document.querySelector('.wind').innerText = `${data.wind.speed}km/h`;
 
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      const weather = data.weather[0].description;
-      const temp = data.main.temp;
-      const feelsLike = data.main.feels_like;
-      const humidity = data.main.humidity;
-
-      resultDiv.innerHTML = `
-        <p>Clima: ${weather}</p>
-        <p>Temperatura: ${temp} °C</p>
-        <p>Sensación térmica: ${feelsLike} °C</p>
-        <p>Humedad: ${humidity}%</p>
-      `;
-    })
-    .catch(error => {
-      resultDiv.innerHTML = "<p>Ha ocurrido un error. Inténtalo de nuevo más tarde.</p>";
-      console.error(error);
-    });
-});
+           
+            document.querySelector('.weather-icon').src = 'img/rain.png';
+        })
+        .catch(error => {
+            console.error('Error fetching weather data:', error);
+            alert('Error fetching weather data. Please try again later.');
+        });
+}

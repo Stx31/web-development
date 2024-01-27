@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>app de Clima</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<header> 
-  
-  <img src="logo.jpg" alt="Logo de la página" width="150" height="150">
 
-  <h1>App de Clima</h1>
-  <nav>
-    <ul>
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">about us</a></li>
-      <li><a href="#">como funcionamos </a></li>
-    </ul>
-  </nav>
-</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clima app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
-  <div id="app">
-    
-    <input type="text" id="city" placeholder="Ciudad">
-    <button id="search">Buscar</button>
-    <div id="result"></div>
-  </div>
-  <script src="app.js"></script>
+    <div class="card">
+        <div class="search">
+            <input type="text" id="cityInput" placeholder="enter city name" spellcheck="false">
+            <button onclick="searchWeather()"> <img src="img/search.png" alt=""></button>
+        </div>
+        <div class="weather">
+            <img src="img/rain.png" class="weather-icon">
+            <h1 class="temp">18C</h1>
+            <h2 class="city">santander</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="img/humidity.png" alt="">
+                    <div>
+                        <p class="humidity">50%</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="img/wind.png" alt="">
+                    <div>
+                        <p class="wind">15km/h</p>
+                        <p>wind speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
 </body>
+
 </html>
