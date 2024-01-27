@@ -49,3 +49,11 @@ class Coche
 	String[] meses = {"Enero", "Febrero", "Marzo", "Abril"};
 
 	System.out.println("El primer mes del año es: " + meses[0]);
+	//System.out.println("El array" + meses.length + "elementos");
+
+
+// meses array
+	String[] meses = {"Enero", "Febrero", "Marzo", "Abril"};
+for (int i =0; i<= meses.length-1; i++){
+	   System.out.println(meses[i] + ",");
+}

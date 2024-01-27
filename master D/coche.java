@@ -51,3 +51,33 @@ class Coche {
        System.out.println("La matrícula es: " + coche.getColor() ); 
     } 
  }
+
+/////
+ public class Vehiculo { 
+    private String modelo; 
+    private String matricula; 
+    private String color; 
+    
+    Vehiculo(String modelo, String matricula, String color){ 
+       this.modelo=modelo; 
+       this.matricula=matricula; 
+       this.color=color; 
+    } 
+    public static void main(String[] args) { 
+       Vehiculo vehiculo = new Vehiculo("Audi100","5325FEC","Gris"); 
+       Vehiculo vehiculo2= new Vehiculo("Peugeot","8547PRD","verde"); 
+       Vehiculo vehiculo3=new Vehiculo("","",""); 
+       vehiculo3=vehiculo; 
+       System.out.println("El modelo es: " + vehiculo.modelo ); 
+       System.out.println("La matrícula es: " + vehiculo.matricula); 
+       System.out.println("La matrícula es: " + vehiculo.color ); 
+       System.out.println(" "); 
+       System.out.println("El modelo es: " + vehiculo2.modelo ); 
+       System.out.println("La matrícula es: " + vehiculo2.matricula ); 
+       System.out.println("La matrícula es: " + vehiculo2.color ); 
+       System.out.println(" "); 
+       System.out.println("El modelo es: " + vehiculo3.modelo );  
+       System.out.println("La matrícula es: " + vehiculo3.matricula ); 
+       System.out.println("La matrícula es: " + vehiculo3.color ); 
+    } 
+ }

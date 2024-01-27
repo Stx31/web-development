@@ -21,3 +21,12 @@ public class Nombre {
     }
     
     }
+
+    
+    Public class Persona {
+        private String nombre;
+        private String apellidos;
+        private int edad;
+    private int CodPostal;
+    private String barrio;
+    }
