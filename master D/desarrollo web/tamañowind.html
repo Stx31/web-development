@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <title>Ejemplo cambio de tamaño</title>
+	    <script type="text/JavaScript">
+	        function cambiarTamano(){
+	            ventana.resizeTo(345,200);
+	        }
+	        function abrir(){
+	        ventana = window.open("", "", "width=100, height=100");
+	        }
+	    </script>
+	</head>
+	<body > 
+	    <input type="button" onclick="abrir()" value="abrir"/>
+	    <input type="button" onclick="cambiarTamano()" value="cambiar size"/>
+	</body>
+</html>

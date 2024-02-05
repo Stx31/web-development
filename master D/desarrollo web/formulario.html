@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario con Protección de Datos</title>
+</head>
+<body>
+
+<form id="miFormulario">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre">
+
+  <label>
+    <input type="checkbox" id="protegerDatos" name="protegerDatos"> Proteger datos
+  </label>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var nombreInput = document.getElementById('nombre');
+      var protegerDatosCheckbox = document.getElementById('protegerDatos');
+
+      protegerDatosCheckbox.addEventListener('change', function () {
+        if (protegerDatosCheckbox.checked) {
+          nombreInput.addEventListener('click', function () {
+            alert('Sus datos serán protegidos por clave');
+          });
+        } else {
+          nombreInput.removeEventListener('click', function () {
+            alert('Sus datos serán protegidos por clave');
+          });
+        }
+      });
+    });
+  </script>
+</form>
+
+</body>
+</html>
