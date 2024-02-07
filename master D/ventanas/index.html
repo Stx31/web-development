@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <title>Ejemplo de evento dinámico</title>
+	    <script type="text/JavaScript">
+	        
+	        function modificarCaja() { 
+	            var campo = document.getElementById("campo"); 
+	            campo.value = "Escriba aquí su nombre ..."; 
+	        } 
+                function load() { 
+                    var boton = document.getElementById("reset"); 
+                    boton.addEventListener("click", modificarCaja, false); 
+                } 
+	    </script> 
+	</head>
+	<body onload="load();">
+	    <input type="text" id="campo" name="campo" value="" />
+	    <input type="button" id="reset" name="reset" value="resetear" />
+	</body>
+</html>
