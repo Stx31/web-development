@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones en JavaScript</title>
+</head>
+<body>
+    <input type="text" id="inputText">
+    <button onclick="agregar()">Agregar</button>
+    <br>
+    <button onclick="anyadir()">Añadir</button>
+    <button onclick="borrar()">Borrar</button>
+
+    <script>
+        var datos = [];
+
+        function agregar() {
+            var valor = document.getElementById('inputText').value;
+            datos.push(valor);
+            console.log('Valor agregado:', valor);
+        }
+
+        function anyadir() {
+            var resultado = anyadirFuncion(datos);
+            console.log('Resultado:', resultado);
+            alert(resultado);
+        }
+
+        function borrar() {
+            console.log('Vector inicializado');
+            datos = [];
+        }
+
+        function anyadirFuncion(array) {
+            return array.join(', '); 
+        }
+    </script>
+</body>
+</html>
