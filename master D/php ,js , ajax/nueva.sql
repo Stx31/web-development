@@ -1,0 +1,8 @@
+CREATE DATABASE nueva;
+
+USE nueva;
+
+CREATE TABLE provincias (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100)
+);
