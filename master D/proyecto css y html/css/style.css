@@ -1,8 +1,9 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f3f3f3; 
 }
 
 .container {
@@ -14,6 +15,7 @@ body {
 header {
     background-color: #4e74af; 
     padding: 20px 0; 
+    text-align: center; 
 }
 
 .logo img {
@@ -55,21 +57,25 @@ p {
 }
 
 /* Estilos del formulario */
-form {
+.contact-form {
     max-width: 400px;
     margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
 }
 
-label {
+.contact-form label {
     display: block;
     margin-bottom: 5px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-    width: 100%;
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: calc(100% - 16px); 
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
@@ -77,12 +83,12 @@ textarea {
     box-sizing: border-box;
 }
 
-input[type="checkbox"] {
+.contact-form input[type="checkbox"] {
     margin-right: 5px;
 }
 
-button[type="submit"] {
-    background-color: #4e74af;
+.contact-form button[type="submit"] {
+    background-color: #4e74af; 
     color: white;
     padding: 10px 20px;
     border: none;
@@ -91,7 +97,6 @@ button[type="submit"] {
     font-size: 16px;
 }
 
-button[type="submit"]:hover {
-    background-color: #385c8e;
+.contact-form button[type="submit"]:hover {
+    background-color: #385c8e; 
 }
-
