@@ -1,0 +1,18 @@
+[
+    {
+      "titulo": "Nuevo anime de acción",
+      "descripcion": "Se anuncia un nuevo anime de acción que promete ser emocionante y lleno de sorpresas.",
+      "fecha": "2024-02-28"
+    },
+    {
+      "titulo": "Lanzamiento de la segunda temporada",
+      "descripcion": "La segunda temporada de un popular anime ha sido lanzada, continuando la historia donde lo dejó la primera temporada.",
+      "fecha": "2024-02-25"
+    },
+    {
+      "titulo": "Anuncio de una película de anime",
+      "descripcion": "Se revela que una popular serie de anime tendrá una película que expandirá su universo y emocionará a los fans.",
+      "fecha": "2024-02-20"
+    }
+  ]
+  
