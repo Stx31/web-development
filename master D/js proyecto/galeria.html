@@ -1,32 +1,36 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galería</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/lightbox.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/lightbox.css">
 </head>
 <body>
-  
-  <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="galeria.html">Galería</a></li>
-      <li><a href="presupuesto.html">Presupuesto</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-  </nav>
+    <div class="ful-img" id="fulImgBox">
+        <img src="images/kimetsu.jpg" id="fulImg" alt="">
+        <span onclick="closeImg()">X</span>
+    </div>
 
-  
-  <h1>Galería de imágenes</h1>
-  <div class="gallery">
-    <a href="images/kimetsu.jpg" data-lightbox="gallery"><img src="images/kimetsu.jpg" alt="Imagen 1"></a>
-    <a href="images/noragami.jpg" data-lightbox="gallery"><img src="images/noragami.jpg" alt="Imagen 2"></a>
-    <a href="images/onepunchman.jpg" data-lightbox="gallery"><img src="images/onepunchman.jpg" alt="Imagen 3"></a>
-   
-  </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="presupuesto.html">Presupuesto</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
 
-  <script src="js/lightbox.js"></script>
+    <div class="img-gallery">
+        <img src="images/kimetsu.jpg" onclick="openFulImg(this.src)" alt="">
+        <img src="images/noragami.jpg" onclick="openFulImg(this.src)" alt="">
+        <img src="images/onepunchman.jpg" onclick="openFulImg(this.src)" alt="">
+        <img src="images/yourliein.png" onclick="openFulImg(this.src)" alt="">
+    </div>
+
+    <script src="script.js"></script>
+    <script src="js/lightbox.js"></script>
 </body>
 </html>

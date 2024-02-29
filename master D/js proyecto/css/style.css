@@ -68,3 +68,15 @@ section {
 .noticia p {
   color: #666;
 }
+
+.img-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.img-gallery img {
+  width: 200px; 
+  height: 200px; 
+  margin: 10px; 
+}

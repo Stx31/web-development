@@ -1,18 +1,17 @@
 [
     {
-      "titulo": "Nuevo anime de acción",
-      "descripcion": "Se anuncia un nuevo anime de acción que promete ser emocionante y lleno de sorpresas.",
-      "fecha": "2024-02-28"
+        "titulo": "Nuevo anime de acción",
+        "descripcion": "Se ha anunciado un nuevo anime de acción que promete ser emocionante y lleno de sorpresas. La historia se desarrolla en un mundo futurista donde la humanidad está al borde de la extinción debido a una invasión alienígena. Un grupo de valientes guerreros se levanta para enfrentarse a la amenaza y defender lo que queda de la civilización. Con una animación impresionante y una banda sonora épica, este anime promete ofrecer emocionantes batallas, intrigantes misterios y personajes memorables.",
+        "fecha": "2024-02-28"
     },
     {
-      "titulo": "Lanzamiento de la segunda temporada",
-      "descripcion": "La segunda temporada de un popular anime ha sido lanzada, continuando la historia donde lo dejó la primera temporada.",
-      "fecha": "2024-02-25"
+        "titulo": "Lanzamiento de la segunda temporada",
+        "descripcion": "La segunda temporada de un popular anime ha sido lanzada, continuando la historia desde donde la dejó la primera temporada. Después de los eventos impactantes del final de la temporada anterior, los protagonistas se encuentran enfrentando nuevos desafíos y enemigos aún más poderosos. Los fanáticos pueden esperar un mayor desarrollo de los personajes principales, así como la introducción de nuevos personajes secundarios que agregarán profundidad a la trama. Con una animación mejorada y giros inesperados en la historia, esta nueva temporada promete mantener a los espectadores al borde de sus asientos.",
+        "fecha": "2024-02-25"
     },
     {
-      "titulo": "Anuncio de una película de anime",
-      "descripcion": "Se revela que una popular serie de anime tendrá una película que expandirá su universo y emocionará a los fans.",
-      "fecha": "2024-02-20"
+        "titulo": "Anuncio de una película de anime",
+        "descripcion": "Se ha revelado que una serie de anime popular tendrá una película que expandirá su universo y emocionará a los fans. La trama de la película llevará a los personajes principales en una emocionante aventura que profundizará en los misterios del mundo en el que viven. Con una combinación de acción trepidante, momentos emocionales y una animación deslumbrante, la película promete ser una experiencia inolvidable para los seguidores de la serie. Además, se han anunciado colaboraciones con renombrados artistas para la banda sonora, lo que añadirá aún más emoción y drama a la historia.",
+        "fecha": "2024-02-20"
     }
-  ]
-  
+]
