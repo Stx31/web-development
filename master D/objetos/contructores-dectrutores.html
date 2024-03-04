@@ -1,0 +1,32 @@
+<html>
+	<body>
+	<p>
+	<?php
+	class Persona {
+	private $nombre;
+	private $apellidos;
+	// Constructor. Se ejecuta al crear una instancia de esta clase
+	function __construct($nombre = "", $apellidos = "") {
+	$this->nombre = $nombre;
+	$this->apellidos = $apellidos;
+	}
+	function setNombre($nombre) {
+	$this->nombre = $nombre;
+	}
+	function getNombre() {
+	return $this->nombre;
+	}
+	function setApellidos($apellidos) {
+	$this->apellidos = $apellidos;
+	}
+	function getNombreCompleto() {
+	return $this->nombre." ".$this->apellidos;
+	}
+	}
+	$persona = new Persona("Carlos","Prueba Construct");
+	echo "Utilizando el metodo __construct ... <br />";
+	echo "Hola mi nombre completo es ".$persona->getNombreCompleto();
+	?>
+	</p>
+	</body>
+	</html>
