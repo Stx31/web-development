@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .Progress_Status {
+            width: 20%;
+            background-color: #ddd;
+        }
+
+        .myprogressBar {
+            transition: width 0.5s;
+            width: 0%;
+            height: 20px;
+            background-color: #4CAF50;
+        }
+    </style>
+
+<body>
+
+    <p> VIDA </p>
+
+    <div class="Progress_Status">
+        <div id="bar1" class="myprogressBar"></div>
+    </div>
+    <button onclick="update('bar1')">enter 1</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="Progress_Status">
+        <div id="bar2" class="myprogressBar"></div>
+    </div>
+
+    <br>
+
+    <input min="0" max="100" id="in" type="number" />
+
+
+
+    <button onclick="update('bar2')">enter 2</button>
+
+
+
+    </head>
+    <script src="app.js"></script>
+</body>
+
+</html>

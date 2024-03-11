@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contador de Actualizaciones</title>
+</head>
+<body>
+  <h1>Contador de Actualizaciones de Página</h1>
+  <p>Esta página ha sido actualizada <span id="contador">0</span> veces.</p>
+
+  <script>
+
+    const contadorElemento = document.getElementById('contador');
+
+
+    let contador = parseInt(localStorage.getItem('contador')) || 0;
+
+    contador++;
+   
+    contadorElemento.textContent = contador;
+
+    localStorage.setItem('contador', contador.toString());
+  </script>
+</body>
+</html>

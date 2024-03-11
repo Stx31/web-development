@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reproductor de Música</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+</style>
+</head>
+<body>
+<h1>Reproductor de Música</h1>
+
+<ul id="playlist">
+  <li data-src="cancion1.mp3">Canción 1</li>
+  <li data-src="cancion2.mp3">Canción 2</li>
+  <li data-src="cancion3.mp3">Canción 3</li>
+</ul>
+
+<audio id="audio-player" controls>
+  Tu navegador no soporta el elemento de audio.
+</audio>
+
+<script>
+  const playlist = document.getElementById('playlist');
+  const audioPlayer = document.getElementById('audio-player');
+
+  playlist.addEventListener('click', event => {
+    if (event.target.tagName === 'LI') {
+      const songSrc = event.target.getAttribute('data-src');
+      audioPlayer.src = songSrc;
+      audioPlayer.play();
+    }
+  });
+</script>
+</body>
+</html>
