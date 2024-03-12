@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reproductor de Música</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #audioPlayer {
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+    <h2>Reproductor de Música</h2>
+    <audio id="audioPlayer" controls>
+        <source src="sample.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <script>
+        
+        function toggleAudio() {
+            var audio = document.getElementById("audioPlayer");
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+</body>
+</html>
