@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+#caja {
+    width: 400px;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px auto;
+}
+#caja a {
+    color: #007bff;
+    text-decoration: none;
+}
+#caja a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma de números</title>
+</head>
+<body>
+    <h1>Suma de números</h1>
+    
+    <input type="text" id="numeroInput" placeholder="Ingrese un número">
+    <button onclick="agregarNumero()">Agregar</button>
+    <br><br>
+    <button onclick="sumar()">Sumar</button>
+    <button onclick="borrar()">Borrar</button>
+    
+    <div id="resultado"></div>
+
+    <script>
+        let numeros = [];
+
+        function agregarNumero() {
+            let inputNumero = document.getElementById('numeroInput').value;
+            if (!isNaN(inputNumero)) {
+                numeros.push(parseFloat(inputNumero));
+                document.getElementById('numeroInput').value = ''; 
+            } else {
+                alert('Por favor ingrese un número válido.');
+            }
+        }
+
+        function sumar() {
+            let suma = 0;
+            for (let i = 0; i < numeros.length; i++) {
+                suma += numeros[i];
+            }
+            document.getElementById('resultado').innerText = 'La suma es: ' + suma;
+        }
+
+        function borrar() {
+            numeros = [];
+            document.getElementById('resultado').innerText = 'Suma inicializada';
+        }
+    </script>
+</body>
+</html>

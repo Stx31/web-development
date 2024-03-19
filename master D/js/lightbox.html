@@ -1,0 +1,32 @@
+<html>  
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>jQuery lightBox</title>
+
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery.lightbox-0.5.js"></script>
+    <link rel="stylesheet" type="text/css" href="jquery.lightbox-0.5.css" 
+	  media="screen" />
+    
+ 
+    <script type="text/javascript">
+    $(function() {
+        $('#galeria a').lightBox();
+    });
+    </script>  
+</head>
+
+<body>
+
+<h2 id="example">Ejemplo de Ligthbox</h2>
+<div id="galeria">
+  <a href="1g.jpg" title="El Mar azul">
+      <img src="1p.jpg" width="72" height="72" alt="" />
+  </a>&nbsp;
+  <a href="2g.jpg" title="Suiza">
+      <img src="2p.jpg" width="72" height="72" alt="" />
+  </a>    
+</div>
+</body>
+</html>

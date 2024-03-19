@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        #text-input {
+            width: 300px;
+            height: 50px;
+            font-size: 16px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        #speak-button {
+            background-color: #1a73e8;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #speak-button:hover {
+            background-color: #0d47a1;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <input type="text" id="text-input" placeholder="Enter text to speak...">
+    <button id="speak-button" onclick="speak()">Speak</button>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

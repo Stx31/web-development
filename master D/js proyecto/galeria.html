@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="/css/style.css">
+    
+</head>
+<body>
+    <div class="ful-img" id="fulImgBox">
+        <img src="images/kimetsu.jpg" id="fulImg" alt="">
+        <span onclick="closeImg()">X</span>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="presupuesto.html">Presupuesto</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="img-gallery">
+        <img src="images/kimetsu.jpg" onclick="openFulImg(this.src)" alt="">
+        <img src="images/noragami.jpg" onclick="openFulImg(this.src)" alt="">
+        <img src="images/onepunchman.jpg" onclick="openFulImg(this.src)" alt="">
+        <img src="images/yourliein.png" onclick="openFulImg(this.src)" alt="">
+    </div>
+
+    <script src="script.js"></script>
+    <script src="js/lightbox.js"></script>
+</body>
+</html>

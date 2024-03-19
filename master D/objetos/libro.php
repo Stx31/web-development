@@ -1,0 +1,22 @@
+<html>
+	<body>
+	<p>		
+        <?php
+        	class libro{
+			public $titulo;
+			public function mostrarTitulo(){
+				echo $this->titulo;
+			}
+		}
+        
+        $lib1 = new libro();
+        $lib1->titulo = 'El quijote';
+        
+        $lib1->mostrarTitulo();
+                   
+        ?>
+  	</p>
+	</body>
+</html>
+
+

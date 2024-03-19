@@ -1,0 +1,18 @@
+{
+    "noticias": [
+      {
+        "titulo": "Nueva película de One Piece anunciada",
+        "contenido": "¡La próxima película de One Piece ha sido anunciada oficialmente! Los fans están emocionados por conocer más detalles."
+      },
+      {
+        "titulo": "Nuevo episodio de anime de One Piece",
+        "contenido": "¡No te pierdas el último episodio de One Piece que revela emocionantes giros en la trama!"
+      },
+      {
+        "titulo": "Nueva temporada de anime revelada",
+        "contenido": "¡Una nueva temporada de tu anime favorito ha sido confirmada! Prepara tu lista de reproducción."
+      }
+      
+    ]
+  }
+  

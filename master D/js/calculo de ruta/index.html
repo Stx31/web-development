@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/JavaScript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJ4UYojA3LduldgOlizCQJjjpNCjHkvn4">
+        </script>
+        <script type="text/JavaScript"> 
+        var mapa; 
+        var mostrar_direcciones; 
+        var servicios_rutas = new google.maps.DirectionsService(); 
+        function cargarmapa() {     
+            mostrar_direcciones = new google.maps.DirectionsRenderer();     
+            var punto = new google.maps.LatLng( 41.129283, -3.233654 );     
+            var opciones = { 
+                zoom: 7, 
+                center: punto, 
+                mapTypeId: google.maps.MapTypeId.ROADMAP     
+            };     
+            mapa = new google.maps.Map(document.getElementById("mapa"), opciones);     
+            mostrar_direcciones.setMap(mapa);     
+            mostrar_direcciones.setPanel(document.getElementById("ruta")); 
+        } 
+        calcularRuta() {     
+            var partida = document.getElementById("partida").value;     
+            var destino = document.getElementById("destino").value;     
+            var opciones = { 
+                origin:partida,  
+                destination:destino, 
+                travelMode: google.maps.DirectionsTravelMode.DRIVING 
+                    
+            };     
+            servicios_rutas.route(opciones, function(response, status) { 
+                if (status == google.maps.DirectionsStatus.OK) { 
+                    mostrar_direcciones.setDirections(response); }     
+                }); 
+        } 
+        </script>
+    </head>
+    <body onload="cargarmapa()"> 
+        Partida : <input id="partida" type="textbox" value=""> 
+        Destino : <input id="destino" type="textbox" value=""> 
+        <input type="button" value="Geolocalizar" onclick="calcularRuta()"> 
+        <br /><br /><br />
+        <div id="mapa" 
+            style="position:relative;float:left;width:650px; height:575px"></div>
+        <div id="ruta" style="position:relative;float:left;width:250px; "></div>
+    </body>
+</html>

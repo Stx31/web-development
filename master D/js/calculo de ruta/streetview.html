@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/JavaScript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJ4UYojA3LduldgOlizCQJjjpNCjHkvn4">
+        </script>
+    <script type="text/JavaScript">
+            function cargarmapa() {
+                var punto = new google.maps.LatLng(
+                    40.415457,
+                    -3.693123
+                );
+                var opciones = {
+                    zoom: 16,
+                    center: punto,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                mapa = new google.maps.Map(document.getElementById("mapa"), opciones);
+                var opciones_fotos = {
+                    position: punto,
+                    pov: {
+                        //ángulo de rotación respecto al norte de la posición
+                        heading: 34, 
+                        //variación ángulo hacia arriba o hacia debajo de la cámara
+                        pitch: 0, 
+                        //zoom de cercanía de la foto, con 0 alejamiento total
+                        zoom: 1    
+                }
+            };
+            var fotos = new google.maps.StreetViewPanorama(
+                document.getElementById("fotos") ,
+                opciones_fotos);
+                mapa.setStreetView(fotos);
+            }
+        </script>
+</head>
+
+<body onload="cargarmapa()">
+    <div id="mapa" style="position:relative;float:left;width:450px;height:455px"></div>
+    <div id="fotos" style="position:relative;float:left;width:450px;height:455px"></div>
+</body>
+
+</html>

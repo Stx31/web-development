@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplo básico AJAX Jquery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            function cargar() {
+                $.ajax({
+                    url: 'json.txt',
+                    type: 'GET',
+                    success: function (data) {
+                        objeto_json = eval("(" + data + ")");
+                        //lee el contenido
+                        var cadena = "";
+                        for (i = 0; i < objeto_json.ficha.length; i++) {
+                            cadena = cadena + "Nombre: <b>" +
+                                objeto_json.ficha[i].nombre + "</b><br/>";
+                            cadena = cadena + "Edad: " +
+                                objeto_json.ficha[i].parametros.edad + "<br/>";
+                            cadena = cadena + "Ciudad: " +
+                                objeto_json.ficha[i].parametros.ciudad + "<br/>";
+                            cadena = cadena + "Profesion: " +
+                                objeto_json.ficha[i].parametros.profesion + "<br/>";
+                            cadena = cadena + "Carnet: " +
+                                objeto_json.ficha[i].parametros.carnet + "<br/><br/>";
+                        }
+                        $("#caja").html(cadena);
+                    },
+                    error: function (xhr, status) {
+                        alert('Disculpe, existió un problema');
+                    }
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <a href="#" onclick="cargar()">Cargar tiempo</a>
+        <div style="width:400px;height:400px; position:relative;" id="caja">
+            Aqui se cargaran los textos desde AJAX
+        </div>
+    </body>
+</html>

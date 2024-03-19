@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias Aleatorias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .noticia {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Noticias Aleatorias</h1>
+
+    <div id="contenedorNoticias"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            fetch('noticias.json')
+                .then(response => response.json())
+                .then(data => {
+
+                    mostrarNoticiaAleatoria(data);
+
+
+                    document.body.addEventListener('click', function () {
+                        mostrarNoticiaAleatoria(data);
+                    });
+                })
+                .catch(error => console.error('Error al obtener las noticias:', error));
+
+            function mostrarNoticiaAleatoria(noticias) {
+
+                const indiceAleatorio = Math.floor(Math.random() * noticias.length);
+                const noticia = noticias[indiceAleatorio];
+                const noticiaElemento = document.createElement('div');
+                noticiaElemento.classList.add('noticia');
+                noticiaElemento.innerHTML = `
+            <h2>${noticia.titulo}</h2>
+            <p><strong>Lugar:</strong> ${noticia.lugar}</p>
+            <p><strong>Fecha:</strong> ${noticia.fecha}</p>
+            <p><strong>Hora:</strong> ${noticia.hora}</p>
+        `;
+
+                const contenedorNoticias = document.getElementById('contenedorNoticias');
+                contenedorNoticias.innerHTML = '';
+                contenedorNoticias.appendChild(noticiaElemento);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

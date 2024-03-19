@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Formularios</title>
+</head>
+<body>
+    <h1>Formulario de Registro</h1>
+    <form action="#" method="post" id="formulario" onsubmit="return validarFormulario()">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" maxlength="50" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" pattern="^(6|7|8|9)[0-9]{8}$" required><br><br>
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" min="18" max="99" required><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        function validarFormulario() {
+            var ok = true;
+            var msg = '';
+
+            var nombre = document.getElementById('nombre').value;
+            if (nombre === '') {
+                ok = false;
+                msg += 'El campo "Nombre" no puede estar vacío.\n';
+            }
+
+            var email = document.getElementById('email').value;
+            var emailRegex = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/;
+            if (!emailRegex.test(email)) {
+                ok = false;
+                msg += 'El campo "Email" no es válido.\n';
+            }
+
+            var telefono = document.getElementById('telefono').value;
+            var telefonoRegex = /^(6|7|8|9)[0-9]{8}$/;
+            if (!telefonoRegex.test(telefono)) {
+                ok = false;
+                msg += 'El campo "Teléfono" no es válido.\n';
+            }
+
+            var edad = document.getElementById('edad').value;
+            if (isNaN(edad) || edad < 18) {
+                ok = false;
+                msg += 'Debes ser mayor de edad para enviar el formulario.\n';
+            }
+
+            if (ok) {
+                alert('Formulario válido. Enviando...');
+            } else {
+                alert(msg);
+            }
+
+            return ok;
+        }
+    </script>
+</body>
+</html>

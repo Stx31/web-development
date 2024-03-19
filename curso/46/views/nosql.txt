@@ -1,0 +1,11 @@
+NOSQL
+no sql cualquier bd no relacionarl
+no guarda datos en tablas relacionales
+si puede guardar relaciones entre datos
+
+tipos de nosql
+bd de docuemntos
+bd de clave-valor
+bd en grafo
+bd orientadas a obejtos
+

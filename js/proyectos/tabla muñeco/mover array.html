@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mover 'x' en un array</title>
+</head>
+<body>
+  <script>
+    const array = ['a', 'b', 'c', 'x', 'd', 'e', 'f']; 
+    function randomIntFromInterval(min, max) { // min and max included 
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
+    let position =   randomIntFromInterval( 0 , array.length -1) 
+
+    
+    function displayArray() {
+      const result = array.map((item, index) => (index === position ? `[${item}]` : item));
+      console.log(result.join(' '));
+    }
+
+    displayArray(); 
+
+   
+    function moveForward() {
+      if (position < array.length - 1) {
+        position++;
+        displayArray();
+      }
+    }
+
+   
+    function moveBackward() {
+      if (position > 0) {
+        position--;
+        displayArray();
+      }
+    }
+
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowRight') {
+        moveForward();
+      } else if (event.key === 'ArrowLeft') {
+        moveBackward();
+      }
+    });
+  </script>
+</body>
+</html>

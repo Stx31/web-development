@@ -1,0 +1,12 @@
+props:
+son una característica fundamental en React y se utilizan para pasar 
+datos de un componente padre a un componente hijo en una jerarquía de componentes. 
+
+tipos de props:
+Pasando datos:
+permiten que los datos fluyan de un componente padre a uno o varios componentes hijos.
+Inmutabilidad:
+Los props son inmutables, lo que significa que no pueden ser modificados por el componente hijo que los recibe
+
+Acceso a los props:
+los props se acceden como un objeto

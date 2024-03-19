@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejemplo básico AJAX y XML</title>
+	<link rel="stylesheet" href="styles.css">
+	<script type="text/javascript">
+		function cargar() {
+			var objHttp = null;
+			if (window.XMLHttpRequest) {
+				objHttp = new XMLHttpRequest();
+			} else if (window.ActiveXObject) {
+				objHttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			objHttp.open("GET", "portada.xml", true);
+			objHttp.onreadystatechange = function () {
+				if (objHttp.readyState == 4) {
+					var documento = objHttp.responseXML;
+					var noticias = documento.documentElement;
+					var cadena = "";
+					for (i = 0; i < 3; i++) {
+						cadena += "<b>Titular:</b> " + noticias.getElementsByTagName("item")[i].getElementsByTagName("title")[0].textContent + "<br/>";
+						cadena += "<b>Descripción:</b> " + noticias.getElementsByTagName("item")[i].getElementsByTagName("description")[0].textContent + "<br/>";
+						cadena += "<b>Enlace:</b> <a href='" + noticias.getElementsByTagName("item")[i].getElementsByTagName("link")[0].textContent + "' target='_blank'>" +
+							noticias.getElementsByTagName("item")[i].getElementsByTagName("link")[0].textContent + "</a><br/><br/>";
+					}
+					document.getElementById("caja").innerHTML = cadena;
+				}
+			}
+			objHttp.send(null);
+		} 
+	</script>
+</head>
+
+<body>
+	<div id="caja">
+		Cargando Rss...
+	</div>
+	<script type="text/javascript">cargar();</script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Edit_Mensaj e SYSTEM "Edit_Mensaje.dtd">
+<tiempo>
+    <ciudad>
+        <nombre>Zaragoza</nombre>
+        <estado>Nublado</estado>
+        <maxima>10</maxima>
+        <minima>-1</minima>
+    </ciudad>
+    <ciudad>
+        <nombre>Madrid</nombre>
+        <estado>Lluvioso</estado>
+        <maxima>7</maxima>
+        <minima>-3</minima>
+    </ciudad>
+    <ciudad>
+        <nombre>Cádiz</nombre>
+        <estado>Nublado</estado>
+        <maxima>12</maxima>
+        <Minima>5</minima>
+    </ciudad>
+    <ciudad>
+        <nombre>Lugo</nombre>
+        <estado>Soleado</estado>
+        <maxima>10</maxima>
+        <minima>3</minima>
+    </ciudad>
+</tiempo>

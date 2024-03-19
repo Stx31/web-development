@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+  <title>Fadding en jQuery</title>
+  <link href="estilos.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="scriptjquery.js"></script>
+</head>
+<body background="bokeh.jpg">
+
+<div class="caja0">
+		<span id="logo"><img src="logo.png" /></span>
+	</div>
+
+	<div class="caja1" id="caja1">
+   <h1>Fadding en jQuery</h1>
+   <h3><b>Mostrar y ocultar elementos de forma suavizada con "fadding methods"</b></h3>
+   <p><table><tr><td>Oculta toda la caja</td><td>
+      <span><button class="boton gris" type="button" id="ocultacaja">Ocultar Caja</button>  </span></td>
+     </tr> <tr><td>Oculta el listado de más abajo</td><td>
+      <span><button class="boton gris" type="button" id="ocultartoda">Ocultar</button>  </span></td>
+     </tr> <tr><td>Muestra el listado de más abajo</td><td>
+      <span><button class="boton gris" type="button" id="mostrartoda">Mostrar</button> </span></td>
+      </tr><tr><td>Oculta y muestra de nuevo el listado de más abajo</td><td>
+      <span><button class="boton gris" type="button" id="ocultarmostrar">Ocultar/Mostrar</button> </span></td>
+      </tr>
+   </table></p>
+   <form name="f1">
+      Elige el porcentaje de fadding del listado: <select name="opacidad" id="selopacidad">
+         <option value="0.2">20%</option>
+         <option value="0.5">50%</option>
+         <option value="0.8">80%</option>
+         <option value="1" selected="1">100%</option>
+      </select>
+      <br>
+      <p>Elige un valor y un elemento para cambiar su fadding:</p>
+      <input type="range" class="slider" id="porcentaje" name="porcentaje" max="1" step="0.1" value="0">
+      <input class="textbox" type="text" name="porcen" id="porcen" value="0" maxlength="3" size="3" disabled>
+      <select name="elemento" id="selelemento">
+         <option value="e1" selected="e1">e1</option>
+         <option value="e2">e2</option>
+         <option value="e3">e3</option>
+      </select>
+    	<button class="boton gris" type="button" id="cambia">Cambia</button>
+      <button class="boton gris" type="button" id="resetfade">Reset</button>
+   </form>
+   <ul id="milista">
+      <li id="e1"><h2>Elemento 1</h2></li>
+      <li id="e2"><h2>Elemento 2</h2></li>
+      <li id="e3"><h2>Elemento 3</h2></li>
+   </ul>
+  </div>
+</body>
+</html>

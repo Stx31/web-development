@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stilos.css">
+</head>
+<body>
+    <div id="contenedor">
+        <form action="pagina.php" method="POST" class="formulario" id="formulario">
+            <fieldset class="form-control">
+                <legend class="datos">Datos</legend>
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" class="valida">
+                    <br>
+                    <small>Error mensaje</small>
+                </div>
+                <div>
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" class="valida">
+                    <br />
+                    <small>Error mensaje</small>
+                </div>
+                <div>
+                    <label for="telefono">Telefono de contacto:</label>
+                    <input type="tel" id="telefono" name="telefono" class="valida">
+                    <br />
+                    <small>Error mensaje</small>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" class="valida">
+                    <br />
+                    <small>Error mensaje</small>
+                </div>              
+            </fieldset>
+            <fieldset>
+                <legend>Presupuesto</legend>
+                <label for="producto">Elige un producto</label>
+                <select class="colorgris" name="producto" id="producto">
+                    <option value="opcion1">Seleccione un producto</option>
+                    <option value="opcion2">opcion1</option>
+                    <option value="opcion3">opcion2</option>
+                    <option value="opcion4">opcion3</option>
+                </select>
+                <br />
+                <div>
+                    <label for="plazo">Plazo en meses</label>
+                    <select name="plazo" id="plazo">
+                        <option> 1 mes</option>
+                        <option> 2 meses</option>
+                        <option>3 meses</option>
+                    </select>
+                </div>
+                <div>
+                    <p>Elige los extras para el producto</p>
+                    <input type="checkbox" id="color" name="color" value="color">
+                    <label class="extras" for="color">Color personalizado</label>
+                    <input type="checkbox" id="tipografia" name="tipografia" value="tipografia">
+                    <label class="extras" for="tipografia">Tipografia personalizada</label>
+                    <input type="checkbox" id="terminacion" name="terminacion" value="terminacion">
+                    <label class="extras" for="terminacion">Terminacion personalizada</label>
+                    <input type="checkbox" id="nombrep" name="nombrep" value="nombrep">
+                    <label class="extras" for="nombrep">Nombre personalizado</label>
+                </div>
+                <br />
+                <label for="presupuesto">Presupuesto estimado:</label>
+                <input type="text" id="presupuesto" name="presupuesto">
+            </fieldset>
+            <fieldset>
+                <legend>Aceptación de Condiciones y envio de presupuesto</legend>
+                <label for="privacidad">He leido la política de privacidad</label>
+                <input type="checkbox" id="privacidad" name="privacidad">
+                <br />
+                <input class="colorgris" type="submit" value="Enviar Formulario">
+                <input class="colorgris" type="reset" value="Borrar Formulario">
+            </fieldset>
+            <div>
+                <h5>Todos los derechos reservados 2027</h5>
+            </div>
+        </form>
+    </div>
+    <script src="./formularioSencillo.js"></script>
+</body>
+</html>

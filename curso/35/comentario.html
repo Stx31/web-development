@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Otra España - Comentarios en Tiempo Real</title>
+</head>
+<body>
+    <h1>Bienvenido a Otra España</h1>
+    <p>Este es un sitio web donde los usuarios pueden dejar sus comentarios y verlos en tiempo real.</p>
+
+
+    <div id="caja-comentarios">
+        <h2>Comentarios</h2>
+        <ul id="lista-comentarios">
+        </ul>
+    </div>
+
+    <h3>Dejar un comentario</h3>
+    <form id="formulario-comentario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required><br>
+        <label for="comentario">Comentario:</label>
+        <textarea id="comentario" rows="4" cols="50" required></textarea><br>
+        <button type="button" onclick="agregarComentario()">Enviar</button>
+    </form>
+
+  <script src="comentario.js"></script>
+</body>
+</html>

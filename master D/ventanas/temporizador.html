@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizadores en JavaScript</title>
+</head>
+
+<body>
+
+    <button id="pinchameBtn">Pínchame</button>
+    <button id="noPinchesBtn">No me pinches</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var contador = 0;
+            var pinchameBtn = document.getElementById('pinchameBtn');
+            var noPinchesBtn = document.getElementById('noPinchesBtn');
+
+            function actualizarBotones() {
+                pinchameBtn.innerText = 'Nuevo texto ' + contador;
+                noPinchesBtn.innerText = 'Nuevo texto ' + contador;
+            }
+
+            function mostrarContador() {
+                alert('Valor del contador: ' + contador);
+            }
+
+            pinchameBtn.addEventListener('click', function () {
+                contador++;
+                actualizarBotones();
+            });
+
+            noPinchesBtn.addEventListener('click', function () {
+                contador--;
+                actualizarBotones();
+            });
+
+
+            setTimeout(mostrarContador, 5000);
+        });
+    </script>
+
+</body>
+
+</html>

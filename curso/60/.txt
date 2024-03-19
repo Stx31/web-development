@@ -1,0 +1,8 @@
+Componentes: Los componentes son bloques de construcción fundamentales en React. 
+Pueden ser piezas pequeñas y reutilizables de la interfaz de usuario, como botones, formularios o elementos más complejos como barras laterales o encabezados.
+
+Props (Propiedades): Las propiedades son datos que se pasan de un componente padre a un componente hijo.
+
+Componentes de ciclo de vida: React proporciona métodos que se ejecutan en diferentes momentos del ciclo de vida de un componente
+
+React es una biblioteca de JavaScript desarrollada por Facebook que se utiliza principalmente para construir interfaces de usuario (UI) interactivas y dinámicas en aplicaciones web. 

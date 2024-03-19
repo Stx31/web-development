@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lector de RSS</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+   
+    .newsItem {
+        margin-bottom: 20px;
+    }
+    .newsItem h3 {
+        margin-bottom: 5px;
+    }
+</style>
+</head>
+<body>
+
+<div id="rssFeed"></div>
+
+<script>
+$(document).ready(function() {
+    
+    var rssURL = "https://news.google.com/rss/articles/CBMiMWh0dHBzOi8vd3d3LmJiYy5jb20vbmV3cy93b3JsZC11cy1jYW5hZGEtNjgyODQzODDSATVodHRwczovL3d3dy5iYmMuY29tL25ld3Mvd29ybGQtdXMtY2FuYWRhLTY4Mjg0MzgwLmFtcA?oc=5";
+
+    
+    $.ajax({
+        url: rssURL,
+        type: "GET",
+        dataType: "xml",
+        success: function(xml) {
+            
+            $(xml).find("item").each(function(index) {
+                if (index < 3) {
+                    var title = $(this).find("title").text();
+                    var link = $(this).find("link").text();
+                    var description = $(this).find("description").text();
+                    
+                   
+                    var newsItem = "<div class='newsItem'>";
+                    newsItem += "<h3><a href='" + link + "'>" + title + "</a></h3>";
+                    newsItem += "<p>" + description + "</p>";
+                    newsItem += "</div>";
+
+                    
+                    $("#rssFeed").append(newsItem);
+                }
+            });
+        },
+        error: function(xhr, status, error) {
+            console.error("Error al cargar el RSS: " + status + " - " + error);
+        }
+    });
+});
+</script>
+
+</body>
+</html>

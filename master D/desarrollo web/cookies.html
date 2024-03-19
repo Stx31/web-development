@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo cambio de tamaño</title>
+    <script type="text/JavaScript">
+	        var gestorCookie = {
+                    crear: function(nombre, valor, dias) {
+                        if (dias) {
+                            var fecha = new Date();
+                            fecha.setTime(fecha.getTime()+(dias*24*60*60*1000));
+                            var expires = "; expires="+fecha.toGMTString();
+                        } else {
+                            var expires = "";
+                        } 
+                        document.cookie = nombre+"="+valor+expires+"; path=/";
+                        alert('Creada')
+                    },
+	            leer: function(nombre) {
+	                var comienzoCookie = nombre + "=";
+	                var cookies = document.cookie.split(';');
+	                for(var i=0;i < cookies.length;i++) {
+	                    var trozo = cookies[i];
+	                    while (trozo.charAt(0)==' '){
+                                trozo = trozo.substring(1,trozo.length);
+                            }
+                            if (trozo.indexOf(comienzoCookie) == 0){
+                                return trozo.substring(comienzoCookie.length,trozo.length);
+                            }
+	                }
+	                return null;
+	            },
+                    borrar: function(name) {
+                        gestorCookie.crear(name,"",-1);
+                        alert('borrada')
+                    }
+	        };
+	    </script>
+</head>
+
+<body>
+    Crear Cokie
+    <br />
+    Nombre <input type="text" name="nombre" id="nombre" />
+    <br />
+    Valor <input type="text" name="valor" id="valor" />
+    <br />
+    días <input type="text" name="dias" id="dias" />
+    <br />
+    <input type="button" onclick="gestorCookie.crear( 
+                    document.getElementById('nombre').value, 
+                    document.getElementById('valor').value, 
+                    document.getElementById('dias').value)" value="Crear" />
+    <br /><br />
+    Leeer Cookie
+    <br />
+    Cookie a Leer : <input type="text" name="valordev" id="valordev" />
+    <br />
+    <input type="button" onclick="alert(gestorCookie.leer(document.getElementById('valordev').value))" value="Leer" />
+    <br /><br />
+    Borrar Cookie
+    <br />
+    Cookie a borrar : <input type="text" name="borrar" id="borrar" />
+    <br />
+    <input type="button" onclick="gestorCookie.borrar(document.getElementById('borrar').value)" value="Leer" />
+    <br /><br />
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+Cookie:
+
+Una cookie es un pequeño archivo de texto que un sitio web envía y almacena en el navegador del usuario. 
+Esto permite al sitio web recordar información sobre el usuario, como preferencias y actividad previa, para mejorar la experiencia y realizar 
+un seguimiento de su actividad en el sitio
+
+
+Router:
+
+Un router es un dispositivo esencial en redes informáticas que conecta diferentes redes y dirige el tráfico de datos entre ellas. Su función principal es enrutar datos desde una red local (como una red doméstica o empresarial) hacia redes externas, como Internet, y viceversa, permitiendo que múltiples dispositivos 
+compartan una única conexión a Internet. 

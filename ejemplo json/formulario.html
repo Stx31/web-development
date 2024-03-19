@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+
+    <h1>Formulario de Registro</h1>
+
+    <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required><br>
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" required><br>
+
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" required><br>
+
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" required><br>
+
+        <button type="button" onclick="guardarDatos()">Guardar</button>
+    </form>
+
+    <script src="formulario.js"></script>
+
+</body>
+</html>

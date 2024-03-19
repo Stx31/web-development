@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>cambio de estilo</title>
+        <link href="viejo.css" rel="stylesheet" id="estilo">
+        <script type="text/javascript">  
+            function cEstilo(estilo) { 
+                document.getElementById("estilo").href = estilo; 
+            }
+        </script>
+    </head>
+    <body>
+        <div id="cabecera">soy la cabecera</div>
+        <div id="cuerpo">cuerpo de la web<br /><br /> 
+        <input type="button" onclick="cEstilo('viejo.css')" value="Viejo" />
+        <input type="button" onclick="cEstilo('nuevo.css')" value="Nuevo" /> </div>
+    </body>
+</html>
