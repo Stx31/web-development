@@ -72,7 +72,7 @@ html {
 
 h1, h2, h3, h4, h5, h6, strong {
   -webkit-hyphens: auto;
-          hyphens: auto;
+  hyphens: auto;
   font-weight: inherit;
   font-size: inherit;
 }
@@ -86,7 +86,7 @@ form, input, textarea, select, button {
   font-family: inherit;
   font-size: inherit;
   -webkit-hyphens: auto;
-          hyphens: auto;
+  hyphens: auto;
   background-color: transparent;
   display: block;
 }
@@ -99,7 +99,7 @@ body {
   background-color: var(--blanco);
   color: var(--negro);
   -webkit-hyphens: auto;
-          hyphens: auto;
+  hyphens: auto;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -138,7 +138,7 @@ body {
 }
 
 .carrousel .img {
-  width: calc( 100% / 2 - 2em);
+  width: calc(100% / 2 - 2em);
   min-height: 10vh;
   color: var(--negro);
   transition: all 0.4s ease;

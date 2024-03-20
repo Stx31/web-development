@@ -1,4 +1,4 @@
-/* Aquí definimos las Custom properties */
+
 :root{
     --negro         : #393939;
     --blanco        : #ececec;
@@ -8,11 +8,11 @@
 
     --marcado       : rgb(127, 195, 255);
 
-    /* Tipografía */
+ 
     --tipo-principal  : Helvetica, Arial, sans-serif;
 }
     
-/* Las adaptamos al modo oscuro */
+
 @media (prefers-color-scheme: dark) {
     :root{
         --negro         : #ececec;
@@ -24,10 +24,3 @@
     }
 }
 
-
-/* Configuramos si un usuario ha activado el modo alto contraste. (BETA) */
-// @media (prefers-contrast: high){
-//     :root{
-//         
-//     }
-// }
