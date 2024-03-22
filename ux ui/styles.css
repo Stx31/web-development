@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e77b7b;
+  }
+  
+  .iphone-card {
+    width: 300px;
+    height: 550px;
+    background-color: #000;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .iphone-header {
+    height: 30px;
+    background-color: #000;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+  
+  .iphone-notch {
+    width: 60px;
+    height: 10px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    left: calc(50% - 30px);
+  }
+  
+  .iphone-screen {
+    height: 490px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .iphone-content {
+    text-align: center;
+  }
+  
+  .iphone-footer {
+    height: 30px;
+    background-color: #000;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  
