@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fce4ec;
+    margin: 0;
+    padding: 0;
+}
+
+.android-card {
+    max-width: 300px;
+    margin: 50px auto;
+    background-color: #fff; 
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+}
+
+.android-header {
+    height: 30px;
+    background-color: #64b5f6; 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.android-notch {
+    width: 60px;
+    height: 15px;
+    background-color: #64b5f6;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    top: -15px;
+}
+
+.android-screen {
+    padding: 20px;
+}
+
+.android-content {
+    text-align: center;
+}
+
+.android-footer {
+    height: 20px;
+    background-color: #64b5f6; 
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
