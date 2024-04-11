@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KEHA -HUB - Biblioteca</title>
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 <body>
 
@@ -20,14 +22,30 @@
   <a href="kevin.html">Esquina de Kevin</a>
 </nav>
 
-<section>
-  <h2>Biblioteca</h2>
-  <p>¡Explora nuestra colección de vídeos!</p>
+<section id="carousel">
+  <div><img src="IMG/groove.jpg" alt="Imagen 1"></div>
+  <div><img src="IMG/jett-finish.png" alt="Imagen 2"></div>
+  <div><img src="IMG/jettnavidadkawaii.png" alt="Imagen 3"></div>
+  
 </section>
 
 <footer>
   © 2024 KEHA -HUB
 </footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#carousel').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
+  });
+</script>
 
 </body>
 </html>
