@@ -1,54 +1,69 @@
-
+/* Estilos globales */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background: radial-gradient(circle, rgba(32, 9, 83, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  background: radial-gradient(circle, #ff00ff, #000); 
   color: #ffffff;
+  transition: background-color 0.3s ease; 
+  animation: neon-bg 5s ease infinite alternate;
 }
 
-header, nav, section, footer {
+@keyframes neon-bg {
+  0% {
+    background: radial-gradient(circle, #ff00ff, #000);
+  }
+  100% {
+    background: radial-gradient(circle, #ff00ff, #000);
+  }
+}
+
+/* Estilos para el header */
+header {
+  background-color: #333;
   padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header, footer {
-  background-color: transparent;
-  text-align: center;
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-nav {
-  background-color: transparent;
-  text-align: center;
+nav ul li {
+  display: inline;
 }
 
-nav a {
+nav ul li a {
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
   padding: 10px;
-  transition: all 0.3s ease;
 }
 
-nav a:hover {
-  color: #6f20d0;
+nav ul li a.active {
+  background-color: #6f20d0; 
 }
 
-section {
-  text-align: center;
-}
-
-
-#carousel img {
-  width: 300px;
-  height: auto; 
-  max-width: 100%;
-  display: block; 
-  margin: 0 auto; 
-}
-
+/* Estilos para el footer */
 footer {
-  background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: #333;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-info,
+nav,
+.social-icons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.social-icons img {
+  width: 30px;
+  margin: 0 10px;
 }
