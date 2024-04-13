@@ -1,11 +1,11 @@
-/* Estilos globales */
+/* Estilos generales */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background: radial-gradient(circle, #ff00ff, #000); 
+  background: radial-gradient(circle, #ff00ff, #000);
   color: #ffffff;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
   animation: neon-bg 5s ease infinite alternate;
 }
 
@@ -44,26 +44,100 @@ nav ul li a {
 }
 
 nav ul li a.active {
-  background-color: #6f20d0; 
+  background-color: #6f20d0;
 }
 
-/* Estilos para el footer */
-footer {
-  background-color: #333;
+/* Estilos para la caja principal */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   padding: 20px;
+  background: radial-gradient(circle, #ff00ff, #000);
+  color: #ffffff;
+  animation: neon-bg 5s ease infinite alternate;
+}
+
+/* Estilos para el contenido */
+.content {
+  max-width: 600px;
+  width: 100%;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+/* Estilos para el formulario */
+form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6f20d0;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4b0c7d;
+}
+
+/* Estilos para el mapa */
+#map {
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Estilos para el footer  */
+.futuristic-footer {
+  background-color: #000;
+  padding: 40px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.company-info,
-nav,
-.social-icons {
-  text-align: center;
-  margin-bottom: 20px;
+.company-info {
+  flex: 1;
+  text-align: left;
 }
 
-.social-icons img {
-  width: 30px;
-  margin: 0 10px;
+.social-icons {
+  margin-top: 20px;
 }
+
