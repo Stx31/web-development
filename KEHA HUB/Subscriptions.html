@@ -22,12 +22,45 @@
 
 <section>
   <h2>Suscripciones</h2>
-  <p>¡Suscríbete para no perderte nuestros últimos vídeos!</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Reseña</th>
+      </tr>
+    </thead>
+    <tbody id="tabla-suscriptores">
+    
+    </tbody>
+  </table>
 </section>
 
 <footer>
   © 2024 KEHA -HUB
 </footer>
+
+<script>
+
+  fetch('suscriptores.json')
+    .then(response => response.json())
+    .then(data => {
+      const tablaSuscriptores = document.getElementById('tabla-suscriptores');
+      data.suscriptores.forEach(suscriptor => {
+        const fila = document.createElement('tr');
+        const columnaNombre = document.createElement('td');
+        const columnaReseña = document.createElement('td');
+        
+        columnaNombre.textContent = suscriptor.nombre;
+        columnaReseña.textContent = suscriptor.reseña;
+        
+        fila.appendChild(columnaNombre);
+        fila.appendChild(columnaReseña);
+        
+        tablaSuscriptores.appendChild(fila);
+      });
+    })
+    .catch(error => console.error('Error al cargar los suscriptores:', error));
+</script>
 
 </body>
 </html>
