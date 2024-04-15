@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KEHA -HUB - Suscripciones</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KEHA -HUB - Suscripciones</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -13,53 +13,49 @@
 </header>
 
 <nav>
-  <a href="index.html">Inicio</a>
-  <a href="trending.html">Trending</a>
-  <a href="subscriptions.html">Suscripciones</a>
-  <a href="library.html">Biblioteca</a>
-  <a href="kevin.html">Esquina de Kevin</a>
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="trending.html">Trending</a></li>
+    <li><a href="subscriptions.html">Suscripciones</a></li>
+    <li><a href="library.html">Biblioteca</a></li>
+    <li><a href="kevin.html">Esquina de Kevin</a></li>
+  </ul>
 </nav>
 
-<section>
-  <h2>Suscripciones</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Nombre</th>
-        <th>Reseña</th>
-      </tr>
-    </thead>
-    <tbody id="tabla-suscriptores">
-      <!-- Aquí se cargarán los suscriptores desde JavaScript -->
-    </tbody>
-  </table>
+<section class="container">
+  <div class="content">
+    <h2>Carrusel de Imágenes</h2>
+    <div class="carousel">
+      <img src="/IMG/jett-finish.png" alt="Imagen 1">
+      <img src="/IMG/jettnavidadkawaii.png" alt="Imagen 2">
+    </div>
+  </div>
 </section>
 
-<footer>
-  © 2024 KEHA -HUB
+<footer class="futuristic-footer">
+  <div class="footer-content">
+    <div class="company-info">
+      <p>© 2024 KEHA -HUB</p>
+    </div>
+    <div class="social-icons">
+      
+    </div>
+  </div>
 </footer>
 
 <script>
-  
-  fetch('suscriptores.json')
-    .then(response => response.json())
-    .then(data => {
-      const tablaSuscriptores = document.getElementById('tabla-suscriptores');
-      data.suscriptores.forEach(suscriptor => {
-        const fila = document.createElement('tr');
-        const columnaNombre = document.createElement('td');
-        const columnaReseña = document.createElement('td');
-        
-        columnaNombre.textContent = suscriptor.nombre;
-        columnaReseña.textContent = suscriptor.reseña;
-        
-        fila.appendChild(columnaNombre);
-        fila.appendChild(columnaReseña);
-        
-        tablaSuscriptores.appendChild(fila);
-      });
-    })
-    .catch(error => console.error('Error al cargar los suscriptores:', error));
+  const imagenes = document.querySelectorAll('.carousel img');
+
+  imagenes.forEach(imagen => {
+    imagen.addEventListener('mouseenter', () => {
+      imagen.style.transform = 'scale(1.2)';
+      imagen.style.transition = 'transform 0.3s ease';
+    });
+
+    imagen.addEventListener('mouseleave', () => {
+      imagen.style.transform = 'scale(1)';
+    });
+  });
 </script>
 
 </body>
