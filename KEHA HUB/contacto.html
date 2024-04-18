@@ -3,81 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto - KEHA-HUB</title>
+  <title>KEHA -HUB - Contacto</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header>
-    <img src="ruta_al_logo_empresa.png" alt="Logo de KEHA -HUB">
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="trending.html">Trending</a></li>
-        <li><a href="subscriptions.html">Suscripciones</a></li>
-        <li><a href="library.html">Biblioteca</a></li>
-        <li><a href="kevin.html">Esquina de Kevin</a></li>
-        <li><a href="contacto.html" class="active">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <img src="/IMG/dc122e6b75a2ceae69c4db386c8ff09d.jpg" alt="Logo de KEHA -HUB">
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="contacto.html" class="active">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <div class="container">
-    <div class="content">
-      <h2>Contáctanos</h2>
-      <p>Por favor, completa el siguiente formulario para ponerte en contacto con nosotros.</p>
-      <form id="contact-form">
+<section class="container mt-5">
+  <h2>Contacto</h2>
+  <form id="contactForm" class="mt-4">
+    <div class="row">
+      <div class="col-md-6">
         <div class="form-group">
           <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required>
+          <input type="text" class="form-control" id="nombre" name="nombre" required minlength="3" maxlength="40" pattern="[a-zA-Z ]+">
         </div>
         <div class="form-group">
           <label for="apellidos">Apellidos:</label>
-          <input type="text" id="apellidos" name="apellidos" required>
+          <input type="text" class="form-control" id="apellidos" name="apellidos" required minlength="4" maxlength="60" pattern="[a-zA-Z ]+">
         </div>
         <div class="form-group">
-          <label for="email">Correo electrónico:</label>
-          <input type="email" id="email" name="email" required>
+          <label for="correo">Correo Electrónico:</label>
+          <input type="email" class="form-control" id="correo" name="correo" required>
         </div>
+      </div>
+      <div class="col-md-6">
         <div class="form-group">
           <label for="telefono">Teléfono:</label>
-          <input type="tel" id="telefono" name="telefono">
+          <input type="tel" class="form-control" id="telefono" name="telefono" required minlength="9" maxlength="9" pattern="[0-9]+">
         </div>
         <div class="form-group">
-          <label for="comentarios">Comentarios:</label>
-          <textarea id="comentarios" name="comentarios" rows="4" required></textarea>
+          <label for="mensaje">Mensaje:</label>
+          <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
         </div>
-        <div class="form-buttons">
-          <button type="submit">Enviar</button>
-          <button type="reset">Limpiar</button>
-        </div>
-      </form>
-      <div id="map"></div>
+      </div>
     </div>
-  </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+    <button type="reset" class="btn btn-secondary ml-2">Limpiar</button>
+  </form>
+</section>
 
-  <footer class="futuristic-footer">
-    <div class="footer-content">
-      <div class="company-info">
+<section class="container mt-5">
+  <h2>Mapa</h2>
+  <div id="map"></div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
         <p>KEHA -HUB es una plataforma de contenido digital.</p>
         <p>Aviso legal: Este es un sitio web de ejemplo creado con propósitos educativos.</p>
       </div>
-      <nav>
+      <div class="col-md-3">
+        <h5>Enlaces</h5>
         <ul>
           <li><a href="about.html">Acerca de</a></li>
-          <li><a href="contact.html">Contacto</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
           <li><a href="privacy.html">Política de privacidad</a></li>
         </ul>
-      </nav>
+      </div>
+      <div class="col-md-3">
+        <h5>Redes Sociales</h5>
+        <ul>
+          <li><a href="https://facebook.com">Facebook</a></li>
+          <li><a href="https://twitter.com">Twitter</a></li>
+          <li><a href="https://instagram.com">Instagram</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="social-icons">
-      <a href="https://facebook.com"><img src="facebook_icon.png" alt="Facebook"></a>
-      <a href="https://twitter.com"><img src="twitter_icon.png" alt="Twitter"></a>
-      <a href="https://instagram.com"><img src="instagram_icon.png" alt="Instagram"></a>
-    </div>
-  </footer>
+  </div>
+</footer>
 
-  <script src="app.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+<script src="bootstrap.bundle.min.js"></script>
+<script src="app.js"></script>
+
 </body>
 </html>
