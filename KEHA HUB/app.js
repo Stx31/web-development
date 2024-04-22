@@ -1,34 +1,27 @@
-window.addEventListener("load", function(){
-  var colors = [
-    "radial-gradient(circle, rgb(0, 255, 255) 0%, rgba(0, 0, 0, 1) 100%)",
-    "radial-gradient(circle, rgba(32, 9, 83, 1) 0%, rgba(0, 0, 0, 1) 100%)",
-    "radial-gradient(circle, rgb(170, 71, 28) 0%, rgba(0, 0, 0, 1) 100%)",
-    "radial-gradient(circle, rgb(170, 28, 132) 0%, rgba(0, 0, 0, 1) 100%)"
-  ];
-  var currentIndex = 0;
+// Initialize and add the map
+let map;
 
-  function changeColor() {
-    document.body.style.background = colors[currentIndex];
-    currentIndex = (currentIndex + 1) % colors.length;
-  }
+async function initMap() {
+  // The location of Uluru
+  const position = { lat: -25.344, lng: 131.031 };
+  // Request needed libraries.
+  //@ts-ignore
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
 
-  setInterval(changeColor, 3000); 
-});
-
-function initMap() {
-  var myLatLng = {
-    lat: -33.4372,
-    lng: -70.6506
-  };
-
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 15,
-    center: myLatLng
+  // The map, centered at Uluru
+  map = new Map(document.getElementById("map"), {
+    zoom: 4,
+    center: position,
+    mapId: "DEMO_MAP_ID",
   });
 
-  var marker = new google.maps.Marker({
-    position: myLatLng,
+  // The marker, positioned at Uluru
+  const marker = new AdvancedMarkerView({
     map: map,
-    title: 'Ubicación de KEHA-HUB'
+    position: position,
+    title: "Uluru",
   });
 }
+
+initMap();

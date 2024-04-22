@@ -1,0 +1,45 @@
+{
+    "suscriptores": [
+      {
+        "nombre": "Juan Pérez",
+        "reseña": "¡Excelente contenido! Siempre espero ansioso los nuevos vídeos."
+      },
+      {
+        "nombre": "María García",
+        "reseña": "Me encanta la variedad de temas que cubren, muy entretenido."
+      },
+      {
+        "nombre": "Luis Martínez",
+        "reseña": "Sus vídeos son muy informativos, los veo todos los días."
+      },
+      {
+        "nombre": "Ana Rodríguez",
+        "reseña": "Increíbles vídeos, siempre aprendo algo nuevo."
+      },
+      {
+        "nombre": "Carlos López",
+        "reseña": "Los mejores vídeos en línea, no puedo dejar de verlos."
+      },
+      {
+        "nombre": "Sofía Ruiz",
+        "reseña": "Me encanta cómo explican las cosas, muy claros y concisos."
+      },
+      {
+        "nombre": "Pedro González",
+        "reseña": "Suscribirme a este canal fue la mejor decisión que he tomado."
+      },
+      {
+        "nombre": "Laura Sánchez",
+        "reseña": "Recomiendo este canal a todos mis amigos, es genial."
+      },
+      {
+        "nombre": "Diego Torres",
+        "reseña": "Cada vídeo es una joya, siempre aprendo algo nuevo e interesante."
+      },
+      {
+        "nombre": "Lucía Gómez",
+        "reseña": "Me encanta la energía y pasión que le ponen a cada vídeo."
+      }
+    ]
+  }
+  

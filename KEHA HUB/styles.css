@@ -54,3 +54,17 @@ body {
 .footer ul li a:hover {
   text-decoration: underline;
 }
+
+/* Estilos para el carrusel  */
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+/* Estilos para el header */
+.fixed-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
