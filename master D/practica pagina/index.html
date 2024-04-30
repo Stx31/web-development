@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Hofmann</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Estilos CSS-->
+    <link href="styles/reset.css" rel="stylesheet" type="text/css" />
+    <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Cabecera-->
+    <header class="header">
+        <div class="wrapper header__wrapper">
+            <h1 class="logo"><img src="img/hofmann.svg" / alt="logo hofmann"><span
+                    class="visually-hidden">Hofmann</span></h1>
+            <!--Burger Menú-->
+            <input class="menu__btn" type="checkbox" id="menu__btn" />
+            <label class="menu__icon" for="menu__btn"><span class="navicon"></span></label>
+            <!--Menú-->
+            <ul class="menu">
+                <li class="menu__item">FEATURES</li>
+                <li class="menu__item">DOWNLOAD</li>
+                <li class="menu__item">PLACES</li>
+                <li class="menu__item">ADVANTAGES</li>
+                <li class="menu__item">CONTACT</li>
+            </ul>
+        </div>
+    </header>
+    <section class="herobanner">
+        <div class="wrapper">
+            <h2 class="title title--2 herobanner__title colour-white">See The Unmatched Beauty Of The Great Lakes</h2>
+            <div class="herobanner__video-container">
+                <!--<img src="img/video-frame.png"/ alt="video frame">-->
+                <video width="450" height="auto" controls autoplay loop muted>
+                    <source src="media/video.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="herobanner__arrow"><img src="img/arrow.svg" / alt="flecha scroll"></div>
+        </div>
+    </section>
+    <section class="features">
+        <div class="wrapper">
+            <h2 class="title title--2 colour-dark-grey">Features</h2>
+            <h3 class="title title--3 colour-dark-grey">WE’RE TAKING IT TO THE NEXT LEVEL</h3>
+            <div class="features__content">
+                <div class="features__list-container">
+                    <ul class="features__list features__container-element">
+                        <li class="features__list-element">
+                            <div class="features__icon"><img src="img/icon-features-1.svg" / alt="icono dispositivos">
+                            </div>
+                            <div class="features__text">
+                                <h4 class="features__title title--3 left-alignment">RESPONSIVE LAYOUT</h4>
+                                <p class="paragraph features__text">The past few years have seen a dramatic change in
+                                    the public perception of cosmetic surgery.</p>
+                            </div>
+                        </li>
+                        <li class="features__list-element">
+                            <div class="features__icon"><img src="img/icon-features-2.svg" / alt="icono dispositivos">
+                            </div>
+                            <div class="features__text">
+                                <h4 class="features__title title--3 left-alignment">PIXEL PERFECT</h4>
+                                <p class="paragraph features__text">About 64% of all on-line teens say that do things
+                                    online that they wouldn’t want their parents to know about.</p>
+                            </div>
+                        </li>
+                        <li class="features__list-element">
+                            <div class="features__icon"><img src="img/icon-features-3.svg" alt="icono dispositivos" />
+                            </div>
+                            <div class="features__text">
+                                <h4 class="features__title title--3 left-alignment">ORGANIZED LAYERS</h4>
+                                <p class="paragraph features__text">Are you one of the thousands of Iphone owners who
+                                    has no idea that they can get free games for their Iphone?</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="features__img features__container-element">
+                        <picture>
+                            <source media="(min-width:640px)" srcset="img/computer.png">
+                            <img src="img/computer-xs.png">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="download" class="download parallax">
+        <div class="wrapper">
+            <div id="download-container" class="download__content container">
+                <img id="download-icon" class="download-icon" src="img/download-icon.png" alt="icono dispositivos" />
+                <h2 id="download-title" class="title title--2 colour-white download__title">Get Your Free Version</h2>
+                <p id="download-text" class="paragraph download__text">Having used discount toner cartridges for twenty
+                    years, there have been a lot of changes in the toner cartridge market. The market today is
+                    approximately a twenty billion dollar business.</p>
+                <ul id="download-buttons" class="download__list">
+                    <li class="download__list-element">
+                        <a href="https://play.google.com/" class="download__btn" target="_new">Google Play<span
+                                class="visually-hidden">Google Play</span></a>
+                    </li>
+                    <li class="download__list-element">
+                        <a href="https://www.apple.com/" class="download__btn" target="_new">App Store<span
+                                class="visually-hidden">App Store</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="seccion-prueba">
+        <div class="wrapper">
+        </div>
+    </section>
+    <footer>
+    </footer>
+    <!--Javascript-->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/lib/TweenMax.min.js"></script>
+    <script src="scripts/lib/ScrollMagic.min.js"></script>
+    <script src="scripts/lib/debug.addIndicators.min.js"></script>
+</body>
+
+</html>
