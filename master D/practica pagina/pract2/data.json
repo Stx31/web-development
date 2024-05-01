@@ -1,0 +1,67 @@
+{
+    "places": [
+        {
+            "Id": "01",
+            "City": "Madrid",
+            "Name": "Madrid",
+            "Url": "img/madrid1.jpg",
+            "Alt" :  "Madrid"  
+        },
+        {
+            "Id": "02",
+            "City": "Madrid",
+            "Name": "Madrid",
+            "Url": "img/madrid2.jpg" ,
+            "Alt" :  "Madrid"     
+        },
+        {
+            "Id": "03",
+            "City": "Madrid",
+            "Name": "Madrid",
+            "Url": "img/madrid3.jpg" ,
+            "Alt" :  "Madrid"      
+        },
+        {
+            "Id": "04",
+            "City": "Roma",
+            "Name": "Roma",
+            "Url": "img/roma1.jpg"  ,
+            "Alt" :  "Madrid"     
+        },
+        {
+            "Id": "05",
+            "City": "Roma",
+            "Name": "Roma",
+            "Url": "img/roma2.jpg" ,
+            "Alt" :  "Madrid"      
+        },
+        {
+            "Id": "06",
+            "City": "Roma",
+            "Name": "Roma",
+            "Url": "img/roma3.jpg" ,
+            "Alt" :  "Madrid"      
+        },
+        {
+            "Id": "07",
+            "City": "Paris",
+            "Name": "Paris",
+            "Url": "img/paris1.jpg" ,
+            "Alt" :  "Madrid"      
+        },
+        {
+            "Id": "08",
+            "City": "Paris",
+            "Name": "Paris",
+            "Url": "img/paris2.jpg"  ,
+            "Alt" :  "Madrid"     
+        },
+        {
+            "Id": "09",
+            "City": "Paris",
+            "Name": "Paris",
+            "Url": "img/paris3.jpg",
+            "Alt" :  "Madrid"       
+        }
+    ]
+}

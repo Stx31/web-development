@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Hofmann</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" s
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Estilos CSS-->
+    <link href="styles/reset.css" rel="stylesheet" type="text/css" />
+    <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="styles/colorbox.css" />
+    <link rel="stylesheet" type="text/css" href="styles/slick.css" />
+    <link rel="stylesheet" type="text/css" href="styles/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="styles/materialize.css" />
+
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXX-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-XXXXXXXXX-1');
+    </script>
+
+</head>
+
+<body>
+    <!--Cabecera-->
+    <header class="header">
+        <div class="wrapper header__wrapper">
+            <h1 class="logo"><img src="img/hofmann.svg" / alt="logo hofmann"><span
+                    class="visually-hidden">Hofmann</span></h1>
+            <!--Burger Menú-->
+            <input class="menu__btn" type="checkbox" id="menu__btn" />
+            <label class="menu__icon" for="menu__btn"><span class="navicon"></span></label>
+            <!--Menú-->
+            <ul class="menu">
+                <li class="menu__item">FEATURES</li>
+                <li class="menu__item">DOWNLOAD</li>
+                <li class="menu__item">PLACES</li>
+                <li class="menu__item">ADVANTAGES</li>
+                <li class="menu__item">CONTACT</li>
+            </ul>
+        </div>
+    </header>
+    <section class="herobanner">
+        <div class="wrapper">
+            <h2 class="title title--2 herobanner__title colour-white">See The Unmatched Beauty Of The Great Lakes</h2>
+            <div class="herobanner__video-container">
+                <!--<img src="img/video-frame.png"/ alt="video frame">-->
+                <video width="450" height="auto" controls autoplay loop muted>
+                    <source src="media/video.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="herobanner__arrow"><img src="img/arrow.svg" / alt="flecha scroll"></div>
+        </div>
+    </section>
+    <section class="features">
+        <div class="wrapper">
+            <h2 class="title title--2 colour-dark-grey">Features</h2>
+            <h3 class="title title--3 colour-dark-grey">WE’RE TAKING IT TO THE NEXT LEVEL</h3>
+            <div class="features__content">
+                <div class="features__list-container">
+                    <ul class="features__list features__container-element">
+                        <li class="features__list-element">
+                            <div class="features__icon"><img src="img/icon-features-1.svg" / alt="icono dispositivos">
+                            </div>
+                            <div class="features__text">
+                                <h4 class="features__title title--3 left-alignment">RESPONSIVE LAYOUT</h4>
+                                <p class="paragraph features__text">The past few years have seen a dramatic change in
+                                    the public perception of cosmetic surgery.</p>
+                            </div>
+                        </li>
+                        <li class="features__list-element">
+                            <div class="features__icon"><img src="img/icon-features-2.svg" / alt="icono dispositivos">
+                            </div>
+                            <div class="features__text">
+                                <h4 class="features__title title--3 left-alignment">PIXEL PERFECT</h4>
+                                <p class="paragraph features__text">About 64% of all on-line teens say that do things
+                                    online that they wouldn’t want their parents to know about.</p>
+                            </div>
+                        </li>
+                        <li class="features__list-element">
+                            <div class="features__icon"><img src="img/icon-features-3.svg" alt="icono dispositivos" />
+                            </div>
+                            <div class="features__text">
+                                <h4 class="features__title title--3 left-alignment">ORGANIZED LAYERS</h4>
+                                <p class="paragraph features__text">Are you one of the thousands of Iphone owners who
+                                    has no idea that they can get free games for their Iphone?</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="features__img features__container-element">
+                        <picture>
+                            <source media="(min-width:640px)" srcset="img/computer.png">
+                            <img src="img/computer-xs.png">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="download" class="download parallax">
+        <div class="wrapper">
+            <div id="download-container" class="download__content">
+                <img id="download-icon" class="download-icon" src="img/download-icon.png" alt="icono dispositivos" />
+                <h2 id="download-title" class="title title--2 colour-white download__title">Get Your Free Version</h2>
+                <p id="download-text" class="paragraph download__text">Having used discount toner cartridges for twenty
+                    years, there have been a lot of changes in the toner cartridge market. The market today is
+                    approximately a twenty billion dollar business.</p>
+                <ul id="download-buttons" class="download__list">
+                    <li class="download__list-element">
+                        <a href="https://play.google.com/" class="download__btn" target="_new">Google Play<span
+                                class="visually-hidden">Google Play</span></a>
+                    </li>
+                    <li class="download__list-element">
+                        <a href="https://www.apple.com/" class="download__btn" target="_new">App Store<span
+                                class="visually-hidden">App Store</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="places">
+        <div class="wrapper">
+            <h2 class="title title--2 colour-dark-grey">Places</h2>
+            <div class="input-field col l4 m6 s4 hide-on-med-and-up">
+                <select id="elemsSelect">
+                    <option value="" disabled selected>Choose a City</option>
+                    <option class="btn__city-select" value="Madrid">Madrid</option>
+                    <option class="btn__city-select" value="Roma">Roma</option>
+                    <option class="btn__city-select" value="Paris">París</option>
+                </select>
+            </div>
+            <div class="places__btn-container">
+                <div id="btn__city1">
+                    <p class="places__title">Madrid</p>
+                </div>
+                <div id="btn__city2">
+                    <p class="places__title">Roma</p>
+                </div>
+                <div id="btn__city3">
+                    <p class="places__title">París</p>
+                </div>
+            </div>
+            <ul class="row places__content places__container">
+                <!--<div class="col s12 m6 l4">
+                    <div class="places__img-container">
+                        <img class="places__img" src="img/foto3.png" alt="icono dispositivos" />
+                    </div>
+                </div>-->
+            </ul>
+        </div>
+    </section>
+
+    <section class="advantages">
+        <div class="wrapper">
+            <div class="advantages__content">
+                <h2 class="title title--2 colour-white">Advantages</h2>
+                <p class="paragraph advantages__text">One more thing! Any time we start something new it is exciting and
+                    we are very motivated and committed. </p>
+                <ul class="advantages__list center-alignment advantages__carousel">
+                    <li class="advantages__card">
+                        <h3 class="advantages__card-title title--3 center-alignment">SECURE</h3>
+                        <div class="advantages__card-icon"><img src="img/icon-advantage-1.svg" alt="icono seguridad" />
+                            <h4 class="advantages__card-subtitle title title--4 center-alignment">YOUR DATA IS PROTECTED
+                            </h4>
+                            <p class="paragraph advantages__card-text colour-white center-alignment">No matter how far
+                                along
+                                you are in your sophistication as an amateur astronomer…</p>
+                            <button class="advantages__btn advantages__card-btn" target="_new">FIND MORE<span
+                                    class="visually-hidden">FIND
+                                    MORE</span></button>
+                    </li>
+                    <li class="advantages__card">
+                        <h3 class="advantages__card-title title--3 center-alignment">AESTHETIC</h3>
+                        <div class="advantages__card-icon"><img src="img/icon-advantage-2.svg" alt="icono seguridad" />
+                            <h4 class="advantages__card-subtitle title title--4 center-alignment">UNIQUE DESIGN</h4>
+                            <p class="paragraph advantages__card-text colour-white center-alignment">Acres of Diamonds…
+                                you’ve read
+                                the famous story, or at least had it related to you.</p>
+                            <button class="advantages__btn advantages__card-btn" target="_new">FIND MORE<span
+                                    class="visually-hidden">FIND
+                                    MORE</span></button>
+                    </li>
+                    <li class="advantages__card">
+                        <h3 class="advantages__card-title title--3 center-alignment">NEAT</h3>
+                        <div class="advantages__card-icon"><img src="img/icon-advantage-3.svg" alt="icono seguridad" />
+                            <h4 class="advantages__card-subtitle title title--4 center-alignment">ACCURATE IN DETAILS
+                            </h4>
+                            <p class="paragraph advantages__card-text colour-white center-alignment">Some days a
+                                motivational quote
+                                can provide a quick pick-me-up.</p>
+                            <button class="advantages__btn advantages__card-btn" target="_new">FIND MORE<span
+                                    class="visually-hidden">FIND
+                                    MORE</span></button>
+                    </li>
+                    <li class="advantages__card">
+                        <h3 class="advantages__card-title title--3 center-alignment">NEAT</h3>
+                        <div class="advantages__card-icon"><img src="img/icon-advantage-3.svg" alt="icono seguridad" />
+                            <h4 class="advantages__card-subtitle title title--4 center-alignment">ACCURATE IN DETAILS
+                            </h4>
+                            <p class="paragraph advantages__card-text colour-white center-alignment">Some days a
+                                motivational quote
+                                can provide a quick pick-me-up.</p>
+                            <button class="advantages__btn advantages__card-btn" target="_new">FIND MORE<span
+                                    class="visually-hidden">FIND
+                                    MORE</span></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="wrapper">
+        <h2 class="title title--2 colour-dark-grey">Stay in touch</h2>
+        <div class="contact__content">
+            <div class="contact__content-img">
+                <img src="img/contact-mobile.png" alt="dispositivo móvil" />     
+            </div>
+            <div>
+                <form method="post" action="http://scooterlabs.com/echo" enctype="application/x-www-form-urlencoded">
+                    <label for="fname">Nombre   </label>
+                        <input type="text" name="name" id="fname" required pattern="[A-Za-z]+"  autocomplete="name" class="validate">
+                  
+                    <label for="mail">Email 
+                        <input type="email" name="email" id="mail" required placeholder="xxx@xxx.com" autocomplete="email" class="validate">
+                    </label>
+                    <label for="tlf">Teléfono 
+                        <input type="number" name="phone" id="tlf" required  placeholder="+34 336759866" autocomplete="tel" size="9" class="validate">
+                    </label>
+                    <div class="contact__content-btn"><input class="contact__btn" type="submit" value="ENVIAR"></input></div>
+                </form>
+            </div>
+            <div>
+                <ul class="contact__data">
+                     <li><img src="img/location.png"  alt="icono localizacion"/><span class="contact__data-text">300 W Arbutus Dr Citrus Springs</span></li>
+                     <li><img src="img/mail.png"  alt="icono email"/><span class="contact__data-text"></span>contact@hofmann.net</span></li>
+                     <li><img src="img/phone.png"  alt="icono telefono"/><span class="contact__data-text"></span>952-775-6021</span></li>
+                </ul>       
+            </div>
+        </div>
+    </section>
+    <section class="location">
+        <div id="map" class="map"></div>
+    </section>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__content">
+                <p class="paragraph">Copyright © 2020</p>
+                <ul class="footer__utilities">
+                    <li>
+                        <a id="iframe-legal" href="legal.html" class="footer__legal" target="_new">TERMS &
+                            CONDITIONS<span class="visually-hidden">terms & conditions</span></a>
+
+                    </li>
+                    <li>
+                        <img id="btn-up" class="footer__arrow" src="img/arrow-up.png"
+                            alt="flecha para subir al principio de la página" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!--Javascript-->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/lib/TweenMax.min.js"></script>
+    <script src="scripts/lib/ScrollMagic.min.js"></script>
+    <script src="scripts/lib/jquery-3.5.0.min.js"></script>
+    <script src="scripts/lib/jquery.colorbox-min.js"></script>
+    <script src="scripts/lib/slick.js"></script>
+    <script src="scripts/lib/materialize.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7YZ5zEa1Yl2wJ2SNhynLaR3EKcUYt1IM&callback=initMap"
+    async defer></script>
+ <!--<script>
+    var map;
+    function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: 40.4412286, lng: -3.6996254},
+        zoom: 18
+        });
+    }
+    </script>-->
+
+</body>
+
+</html>
