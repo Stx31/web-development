@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinos Turísticos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Destinos Turísticos en el Mundo</h1>
+
+  <label for="continent-select">Selecciona un continente:</label>
+  <select id="continent-select">
+    <option value="America">América</option>
+    <option value="Europa">Europa</option>
+    <option value="Asia">Asia</option>
+  </select>
+
+  <div id="destinos-container">
+  
+  </div>
+
+  <script>
+    document.getElementById('continent-select').addEventListener('change', function() {
+      var continent = this.value;
+      fetch('destinos.json')
+        .then(response => response.json())
+        .then(data => {
+          var destinos = data[continent];
+          var destinosHTML = '';
+          destinos.forEach(destino => {
+            destinosHTML += `
+              <div>
+                <h2>${destino.nombre}</h2>
+                <p><strong>País:</strong> ${destino.pais}</p>
+                <p>${destino.descripcion}</p>
+              </div>
+            `;
+          });
+          document.getElementById('destinos-container').innerHTML = destinosHTML;
+        });
+    });
+  </script>
+</body>
+</html>
