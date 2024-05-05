@@ -3,42 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Destinos Turísticos</title>
-<link rel="stylesheet" href="style.css">
+  <title>Mapa Mundial Interactivo</title>
+  <style>
+    #mapa-mundo {
+      width: 100%;
+      height: auto;
+      max-width: 800px; 
+      margin: 20px auto;
+      display: block;
+    }
+    
+    .continente {
+      fill: #ccc;
+      stroke: #666;
+      stroke-width: 1;
+      cursor: pointer;
+    }
+    
+    .continente:hover {
+      fill: #aaa;
+    }
+  </style>
 </head>
 <body>
-  <h1>Destinos Turísticos en el Mundo</h1>
-
-  <label for="continent-select">Selecciona un continente:</label>
-  <select id="continent-select">
-    <option value="America">América</option>
-    <option value="Europa">Europa</option>
-    <option value="Asia">Asia</option>
-  </select>
-
-  <div id="destinos-container">
-  
-  </div>
+  <svg id="mapa-mundo" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+    <path class="continente" d="M140,180 ..."></path>
+  </svg>
 
   <script>
-    document.getElementById('continent-select').addEventListener('change', function() {
-      var continent = this.value;
-      fetch('destinos.json')
-        .then(response => response.json())
-        .then(data => {
-          var destinos = data[continent];
-          var destinosHTML = '';
-          destinos.forEach(destino => {
-            destinosHTML += `
-              <div>
-                <h2>${destino.nombre}</h2>
-                <p><strong>País:</strong> ${destino.pais}</p>
-                <p>${destino.descripcion}</p>
-              </div>
-            `;
-          });
-          document.getElementById('destinos-container').innerHTML = destinosHTML;
-        });
+    document.querySelectorAll('.continente').forEach(function(cont) {
+      cont.addEventListener('click', function() {
+        alert('Haz clic en ' + this.id);
+      });
     });
   </script>
 </body>
