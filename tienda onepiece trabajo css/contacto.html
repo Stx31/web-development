@@ -3,29 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One piece store</title>
+    <title>One Piece Store - Contáctanos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
     <header>
-        <div class="container">
+        <div class="container header-container">
             <div class="logo">
-                <img src="img/logo one.png" alt="Logo de la tienda">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Logo de One Piece Store">
+                </a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="productos.html">Nuestros Productos</a></li> 
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Nuestros Productos</a></li>
                     <li><a href="contacto.html">Contacta con nosotros</a></li>
                     <li><a href="presupuesto.html">Solicita Presupuestos</a></li>
                 </ul>
             </nav>
         </div>
-    </header>
     <main>
-        <section>
+        <section id="contacto">
             <h2>Contáctanos</h2>
-            <form id="contact-form" class="contact-form">
+            <form id="contact-form" class="contact-form" action="enviar.php" method="post">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
     
@@ -45,11 +46,35 @@
             </form>
         </section>
     
-        <section>
+        <section id="ubicacion">
             <h2>Ubicación</h2>
+            <p>¡Encuéntranos en Sunny Street, East Blue!</p>
             <img src="img/mapa.png" alt="Mapa de Ubicación">
         </section>
     </main>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/logo.png alt="Logo de One Piece en el footer">
+                </div>
+                <div class="footer-info">
+                    <p>One Piece Store &copy; 2024</p>
+                    <p>Dirección: Sunny Street, East Blue</p>
+                    <p>Teléfono: +123 456 7890</p>
+                    <p>Email: info@onepiecestore.com</p>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h3>Síguenos en:</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
     
     <script src="js/app.js"></script>
 </body>
