@@ -1,0 +1,243 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Anuncio */
+#anuncio {
+    background-color: #ff4040;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+#anuncio__texto {
+    font-size: 1rem;
+}
+
+#anuncio__close {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* Superior */
+#superior {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#superior__navegador {
+    display: flex;
+    align-items: center;
+}
+
+#navegador__opciones {
+    display: none;
+}
+
+#navegador__menu {
+    display: flex;
+    list-style: none;
+}
+
+#navegador__menu div {
+    display: flex;
+    align-items: center;
+}
+
+#navegador__menu li {
+    margin: 0 10px;
+}
+
+#superior__cabezera {
+    text-align: center;
+}
+
+#cabezera__titulo a {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+#superior__derecha {
+    display: flex;
+    align-items: center;
+}
+
+#derecha__buscador {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    background-color: #f4f4f4;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#buscador__input {
+    border: none;
+    background-color: transparent;
+    margin-left: 10px;
+    outline: none;
+}
+
+#derecha__sesion, #derecha__shop {
+    margin-left: 15px;
+}
+
+#derecha__sesion i, #derecha__shop i {
+    font-size: 1.5rem;
+}
+
+#sesion__inicio {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#inicio__cabezera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#inicio__mail input, #inicio__mantener input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#inicio__recuperar, #inicio__acceder {
+    text-align: center;
+}
+
+#inicio__acceder p {
+    margin: 10px 0;
+}
+
+/* Contenido */
+#contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.contenido__articulo {
+    width: calc(25% - 40px);
+    margin: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.contenido__articulo:hover {
+    transform: scale(1.05);
+}
+
+.articulo__foto {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.foto {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.articulo__descuento {
+    background-color: #ff4040;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.articulo__descripcion {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.articulo__precio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.articulo__precio p:nth-child(2) {
+    text-decoration: line-through;
+    color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #navegador__opciones {
+        display: block;
+    }
+
+    #navegador__menu {
+        flex-direction: column;
+        display: none;
+    }
+
+    #navegador__opciones:focus + #navegador__menu,
+    #navegador__menu:hover {
+        display: flex;
+    }
+
+    #superior {
+        flex-direction: column;
+    }
+
+    #contenido {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenido__articulo {
+        width: 80%;
+    }
+}
