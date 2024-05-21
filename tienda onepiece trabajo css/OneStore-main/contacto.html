@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,45 +18,57 @@
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="productos.html">Nuestros Productos</a></li>
-                    <li><a href="contacto.html">Contacta con nosotros</a></li>
+                    <li><a href="contacto.html" class="active">Contacta con nosotros</a></li>
                     <li><a href="presupuesto.html">Solicita Presupuestos</a></li>
                 </ul>
             </nav>
         </div>
+    </header>
+    
     <main>
         <section id="contacto">
-            <h2>Contáctanos</h2>
-            <form id="contact-form" class="contact-form" action="enviar.php" method="post">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-    
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-    
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" required>
-    
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-    
-                <input type="checkbox" id="politica" name="politica" required>
-                <label for="politica">Acepto la política de privacidad.</label>
-    
-                <button type="submit">Enviar</button>
-            </form>
+            <div class="container">
+                <h2>Contáctanos</h2>
+                <form id="contact-form" class="contact-form" action="enviar.php" method="post">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="politica" name="politica" required>
+                        <label for="politica">Acepto la política de privacidad.</label>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
         </section>
     
         <section id="ubicacion">
-            <h2>Ubicación</h2>
-            <p>¡Encuéntranos en Sunny Street, East Blue!</p>
-            <img src="img/mapa.png" alt="Mapa de Ubicación">
+            <div class="container">
+                <h2>Ubicación</h2>
+                <p>¡Encuéntranos en Sunny Street, East Blue!</p>
+                <img src="img/mapa.png" alt="Mapa de Ubicación">
+            </div>
         </section>
     </main>
+    
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="img/logo.png alt="Logo de One Piece en el footer">
+                    <img src="img/logo.png" alt="Logo de One Piece en el footer">
                 </div>
                 <div class="footer-info">
                     <p>One Piece Store &copy; 2024</p>
