@@ -5,7 +5,7 @@
     --cor-secundaria: #de3423;
     --cor-terciaria: #a8d0e6;
     --cor-hover: #d43f3f;
-    --cor-de-fundo: #f3f3f3;
+    --cor-de-fondo: #f3f3f3;
     --cor-texto: #000000;
     --cor-texto-secundario: #ffffff;
 
@@ -13,17 +13,18 @@
     --fonte-secundaria: 'Montserrat', sans-serif;
 }
 
-/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body {
-    background-color: var(--cor-de-fundo);
+    background-color: var(--cor-de-fondo);
     font-family: var(--fonte-secundaria);
     color: var(--cor-texto);
+ 
 }
 
 .container {
@@ -224,7 +225,8 @@ nav a:hover {
 .footer-social a:hover {
     color: var(--cor-hover);
 }
-/* Estilos adicionales para las imágenes y los productos */
+
+/* Estilos  para las imágenes y los productos */
 .product-box {
     border: 2px solid #ddd;
     border-radius: 8px;
@@ -250,6 +252,7 @@ nav a:hover {
     font-size: 16px;
     line-height: 1.5;
 }
+
 /* Estilos del botón  carrito */
 .add-to-cart {
     display: inline-block;
@@ -268,13 +271,13 @@ nav a:hover {
     background-color: #d43f3f;
 }
 
-/* Estilos específicos de One Piece para el botón */
+/* Estilos para el botón */
 .add-to-cart.one-piece {
     background-color: #f8d12f;
     background-image: url('assets/logo\ one.png');
     background-repeat: no-repeat;
     background-position: 1px center;
-    padding-left: 50px; 
+    padding-left: 50px;
 }
 
 .gallery {
@@ -328,3 +331,91 @@ nav a:hover {
 #productos h2 {
     text-align: center;
 }
+main {
+    padding-bottom: 50px;
+    }
+    
+    section {
+    margin-bottom: 50px;
+    }
+    
+    form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    }
+    
+    .form-group {
+    margin-bottom: 15px;
+    }
+    
+    label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    }
+    
+    textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    }
+    
+    .form-group input[type="checkbox"] {
+    float: left;
+    margin-right: 5px;
+    }
+    
+    button[type="submit"] {
+    background-color: #ffd700; 
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    
+    button[type="submit"]:hover {
+    background-color: #ffcc00; 
+    }
+    
+    .rating {
+        direction: rtl;
+        unicode-bidi: bidi-override;
+        font-size: 2em;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1em;
+    }
+    
+    .rating input {
+        display: none;
+    }
+    
+    .rating label {
+        color: #ccc;
+        cursor: pointer;
+        font-size: 2rem;
+    }
+    
+    .rating input:checked ~ label {
+        color: gold;
+    }
+    
+    .rating label:hover,
+    .rating label:hover ~ label,
+    .rating input:focus ~ label {
+        color: gold;
+    }
