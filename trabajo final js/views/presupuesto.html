@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Tienda teclados</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="presupuesto.html" class="active">Presupuesto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="quote">
+            <h1>Solicitud de Presupuesto</h1>
+            <form id="quote-form">
+                <fieldset>
+                    <legend>Datos de Contacto</legend>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" maxlength="15" required>
+                    
+                    <label for="surname">Apellidos:</label>
+                    <input type="text" id="surname" name="surname" maxlength="40" required>
+                    
+                    <label for="phone">Teléfono:</label>
+                    <input type="text" id="phone" name="phone" maxlength="9" required>
+                    
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Presupuesto</legend>
+                    
+                    <label for="product">Producto:</label>
+                    <select id="product" name="product">
+                        <option value="100">Producto 1 - 100€</option>
+                        <option value="200">Producto 2 - 200€</option>
+                        <option value="300">Producto 3 - 300€</option>
+                    </select>
+                    
+                    <label for="duration">Plazo (meses):</label>
+                    <input type="number" id="duration" name="duration" value="1" min="1">
+                    
+                    <label>Extras:</label>
+                    <label><input type="checkbox" class="extra" value="50"> Extra 1 - 50€</label>
+                    <label><input type="checkbox" class="extra" value="30"> Extra 2 - 30€</label>
+                    <label><input type="checkbox" class="extra" value="20"> Extra 3 - 20€</label>
+                    
+                    <div id="total">Presupuesto Total: <span id="total-amount">0</span>€</div>
+                    
+                    <label><input type="checkbox" id="terms" required> Acepto las condiciones de privacidad</label>
+                    
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Resetear</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+        <div class="address">Dirección de la empresa</div>
+        <div class="legal">Aviso legal</div>
+    </footer>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
