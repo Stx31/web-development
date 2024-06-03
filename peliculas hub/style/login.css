@@ -1,0 +1,126 @@
+body {
+    background-color: #303641;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#container-register {
+    background-color: #3E4551;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    color: #FFF;
+}
+
+#title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.material-icons.lock {
+    font-size: 36px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.input {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-addon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #AAA;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 40px);
+    padding: 10px 15px 10px 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #484F58;
+    color: #FFF;
+}
+
+.input input:focus {
+    outline: none;
+    background-color: #525A66;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember-me input {
+    margin-right: 10px;
+}
+
+.remember-me span {
+    color: #DDD;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00BCD4;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0097A7;
+}
+
+.privacy {
+    margin-top: 20px;
+}
+
+.privacy a {
+    color: #00BCD4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.privacy a:hover {
+    color: #0097A7;
+}
+
+.register {
+    margin-top: 20px;
+}
+
+.register a {
+    color: #00BCD4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register a:hover {
+    color: #0097A7;
+}
+
+.register button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
