@@ -6,7 +6,7 @@
     <meta name="description" content="Login - Register Template">
     <meta name="author" content="Lorenzo Angelino aka MrLolok">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/login.css">
+    <link rel="stylesheet" href="style/login_register.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
@@ -18,6 +18,13 @@
         <form>
             <div class="input">
                 <div class="input-addon">
+                    <i class="material-icons">person</i>
+                </div>
+                <input id="name" placeholder="Name" type="text" required class="validate" autocomplete="off">
+            </div>
+
+            <div class="input">
+                <div class="input-addon">
                     <i class="material-icons">email</i>
                 </div>
                 <input id="email" placeholder="Email" type="email" required class="validate" autocomplete="off">
@@ -25,16 +32,16 @@
 
             <div class="input">
                 <div class="input-addon">
-                    <i class="material-icons">face</i>
+                    <i class="material-icons">vpn_key</i>
                 </div>
-                <input id="username" placeholder="Username" type="text" required class="validate" autocomplete="off">
+                <input id="password" placeholder="Password" type="password" required class="validate" autocomplete="off">
             </div>
 
             <div class="input">
                 <div class="input-addon">
-                    <i class="material-icons">vpn_key</i>
+                    <i class="material-icons">phone</i>
                 </div>
-                <input id="password" placeholder="Password" type="password" required class="validate" autocomplete="off">
+                <input id="phone" placeholder="Phone Number" type="tel" required class="validate" autocomplete="off">
             </div>
 
             <div class="remember-me">
