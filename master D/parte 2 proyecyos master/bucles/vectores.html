@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Vectores</title>
+</head>
+
+<body>
+    <label for="campoTexto">Campo de Texto:</label>
+    <input type="text" id="campoTexto">
+    <button onclick="insertarEnVector()">Botón 1</button>
+    <button onclick="mostrarVector()">Botón 2</button>
+
+    <script>
+
+        var miVector = [];
+
+        function insertarEnVector() {
+
+            var valorCampo = document.getElementById("campoTexto").value;
+            if (valorCampo !== "") {
+                miVector.push(valorCampo);
+                alert("Texto insertado en el vector.");
+            } else {
+                alert("El campo de texto está vacío. Inserte un texto antes de presionar el botón 1.");
+            }
+        }
+
+        function mostrarVector() {
+            alert("Contenido del vector: " + miVector.join(", "));
+        }
+    </script>
+</body>
+
+</html>
