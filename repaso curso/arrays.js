@@ -21,3 +21,37 @@ for (let i = 0; i < arrayTextos.length; i++) {
 // "banana"
 // "cereza"
 // "durazno"
+
+
+
+
+const personas = [
+    { nombre: 'Juan', edad: 30 },
+    { nombre: 'María', edad: 25 },
+    { nombre: 'Pedro', edad: 35 }
+];
+
+
+personas[1].edad = 26;
+console.log(personas); // [{ nombre: 'Juan', edad: 30 }, { nombre: 'María', edad: 26 }, { nombre: 'Pedro', edad: 35 }]
+
+//obejeto anidado //
+
+
+const tienda = {
+    nombre: 'Mi Tienda',
+    ubicacion: {
+        ciudad: 'Barcelona',
+        pais: 'España'
+    },
+    productos: [
+        { nombre: 'Camiseta', precio: 20 },
+        { nombre: 'Pantalones', precio: 30 }
+    ]
+};
+
+
+tienda.ubicacion.ciudad = 'Madrid';
+tienda.productos[0].precio = 25;
+console.log(tienda);
+
