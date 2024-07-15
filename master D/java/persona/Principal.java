@@ -5,24 +5,25 @@ public class Principal {
         
         Scanner scanner = new Scanner(System.in);
 
+  
         System.out.print("Introduce el nombre: ");
         String nombre = scanner.nextLine();
 
-        
+   
         System.out.print("Introduce los apellidos: ");
         String apellidos = scanner.nextLine();
 
-        
+     
         System.out.print("Introduce la edad: ");
         int edad = scanner.nextInt();
 
+      
         Persona persona = new Persona(nombre, apellidos, edad);
 
-       
-        System.out.println("\nInformación introducida:");
+      
+        System.out.println("\nDatos introducidos:");
         persona.mostrarInformacion();
 
-        
         scanner.close();
     }
 }

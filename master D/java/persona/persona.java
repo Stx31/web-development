@@ -4,14 +4,13 @@ public class Persona {
     private String apellidos;
     private int edad;
 
-    
     public Persona(String nombre, String apellidos, int edad) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.edad = edad;
     }
 
- 
+   
     public String getNombre() {
         return nombre;
     }
@@ -24,7 +23,20 @@ public class Persona {
         return edad;
     }
 
-   
+    
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+  
     public void mostrarInformacion() {
         System.out.println("Nombre: " + nombre);
         System.out.println("Apellidos: " + apellidos);
