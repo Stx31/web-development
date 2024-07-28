@@ -1,0 +1,47 @@
+/* Importa la fuente usada en Valorant */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Rajdhani', sans-serif;
+    background-color: #0f1923; 
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #ff4655; 
+    border-radius: 10px;
+    background-color: #1c2533; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#catImage {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ff4655;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#newCatButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff4655; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    text-transform: uppercase; 
+}
+
+#newCatButton:hover {
+    background-color: #ff6b7d; 
+    transform: scale(1.05);
+}
