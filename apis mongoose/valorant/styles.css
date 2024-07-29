@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #0e0e0e; 
+    color: #ffffff; 
+}
+
+h1 {
+    color: #d32f2f; 
+    border-bottom: 2px solid #d32f2f;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.agent, .skin {
+    border: 1px solid #333; 
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #1c1c1c; 
+    display: flex;
+    align-items: center;
+}
+
+.agent img, .skin img {
+    max-width: 100px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.agent h3, .skin h3 {
+    margin: 0;
+    color: #ffffff; 
+}
+
+.agent {
+    border-color: #d32f2f; 
+}
+
+.skin {
+    border-color: #0d47a1; 
+}
