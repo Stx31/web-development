@@ -1,4 +1,3 @@
-
 async function fetchAgents() {
     try {
         const response = await fetch('https://valorant-api.com/v1/agents');
@@ -19,6 +18,15 @@ async function fetchSkins() {
     }
 }
 
+async function fetchAccountInfo(gameName, tagLine) {
+    try {
+        const response = await fetch(`https://riot-account-api.com/v1/accounts/by-riot-id/${gameName}/${tagLine}`);
+        const data = await response.json();
+        displayAccountInfo(data);
+    } catch (error) {
+        console.error('Error fetching account info:', error);
+    }
+}
 
 function displayAgents(agents) {
     const container = document.getElementById('agents-container');
@@ -40,7 +48,6 @@ function displayAgents(agents) {
     });
 }
 
-
 function displaySkins(skins) {
     const container = document.getElementById('skins-container');
     container.innerHTML = '';
@@ -61,6 +68,30 @@ function displaySkins(skins) {
     });
 }
 
+function displayAccountInfo(account) {
+    const container = document.getElementById('account-info');
+    container.innerHTML = '';
+
+    const accountDiv = document.createElement('div');
+    accountDiv.className = 'account';
+
+    const accountName = document.createElement('h3');
+    accountName.textContent = `Account Name: ${account.name}`;
+
+    const accountTagLine = document.createElement('p');
+    accountTagLine.textContent = `Tag Line: ${account.tagLine}`;
+
+    accountDiv.appendChild(accountName);
+    accountDiv.appendChild(accountTagLine);
+    container.appendChild(accountDiv);
+}
+
+document.getElementById('account-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const gameName = document.getElementById('gameName').value;
+    const tagLine = document.getElementById('tagLine').value;
+    fetchAccountInfo(gameName, tagLine);
+});
 
 fetchAgents();
 fetchSkins();
