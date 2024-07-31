@@ -18,6 +18,16 @@ async function fetchSkins() {
     }
 }
 
+async function fetchPlayerCards() {
+    try {
+        const response = await fetch('https://valorant-api.com/v1/playercards');
+        const data = await response.json();
+        displayPlayerCards(data.data);
+    } catch (error) {
+        console.error('Error fetching player cards:', error);
+    }
+}
+
 async function fetchAccountInfo(gameName, tagLine) {
     try {
         const response = await fetch(`https://riot-account-api.com/v1/accounts/by-riot-id/${gameName}/${tagLine}`);
@@ -68,6 +78,26 @@ function displaySkins(skins) {
     });
 }
 
+function displayPlayerCards(playerCards) {
+    const container = document.getElementById('playercards-container');
+    container.innerHTML = '';
+
+    playerCards.forEach(card => {
+        const cardDiv = document.createElement('div');
+        cardDiv.className = 'playercard';
+
+        const cardName = document.createElement('h3');
+        cardName.textContent = card.displayName;
+
+        const cardImage = document.createElement('img');
+        cardImage.src = card.smallArt;
+
+        cardDiv.appendChild(cardImage);
+        cardDiv.appendChild(cardName);
+        container.appendChild(cardDiv);
+    });
+}
+
 function displayAccountInfo(account) {
     const container = document.getElementById('account-info');
     container.innerHTML = '';
@@ -95,3 +125,4 @@ document.getElementById('account-form').addEventListener('submit', function(even
 
 fetchAgents();
 fetchSkins();
+fetchPlayerCards();

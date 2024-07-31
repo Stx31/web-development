@@ -3,26 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valorant Agents and Skins</title>
+    <title>Valorant Agents, Skins, Player Cards, and Account Information</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Valorant Agents</h1>
-    <div id="agents-container"></div>
+    <header>
+        <h1>Valorant Data</h1>
+        <nav>
+            <ul>
+                <li><a href="#agents-section">Agents</a></li>
+                <li><a href="#skins-section">Weapon Skins</a></li>
+                <li><a href="#playercards-section">Player Cards</a></li>
+                <li><a href="#account-section">Account Information</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h1>Valorant Weapon Skins</h1>
-    <div id="skins-container"></div>
+    <main>
+        <section id="agents-section">
+            <h2>Valorant Agents</h2>
+            <p>Explore the different agents available in Valorant. Click on each agent to learn more about their abilities and background.</p>
+            <div id="agents-container" class="container"></div>
+        </section>
 
-    <h1>Riot Account Information</h1>
-    <form id="account-form">
-        <label for="gameName">Game Name:</label>
-        <input type="text" id="gameName" required>
-        <label for="tagLine">Tag Line:</label>
-        <input type="text" id="tagLine" required>
-        <button type="submit">Fetch Account Info</button>
-    </form>
-    <div id="account-info"></div>
+        <section id="skins-section">
+            <h2>Valorant Weapon Skins</h2>
+            <p>Check out the various weapon skins available in Valorant. These skins can customize the look of your weapons in the game.</p>
+            <div id="skins-container" class="container"></div>
+        </section>
+
+        <section id="playercards-section">
+            <h2>Valorant Player Cards</h2>
+            <p>Discover the different player cards you can use to showcase your profile in Valorant. Each card has unique designs and styles.</p>
+            <div id="playercards-container" class="container"></div>
+        </section>
+
+        <section id="account-section">
+            <h2>Riot Account Information</h2>
+            <p>Enter your game name and tag line to fetch and display your Riot account information. Ensure the details are correct to get accurate information.</p>
+            <form id="account-form">
+                <label for="gameName">Game Name:</label>
+                <input type="text" id="gameName" placeholder="Enter your game name" required>
+                <label for="tagLine">Tag Line:</label>
+                <input type="text" id="tagLine" placeholder="Enter your tag line" required>
+                <button type="submit">Fetch Account Info</button>
+            </form>
+            <div id="account-info"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Valorant Data Viewer. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
+v

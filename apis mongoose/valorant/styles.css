@@ -12,23 +12,31 @@ h1 {
     margin-bottom: 20px;
 }
 
-.agent, .skin, .account {
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.agent, .skin, .account, .playercard {
     border: 1px solid #333;
     border-radius: 8px;
     padding: 10px;
-    margin-bottom: 20px;
     background-color: #1c1c1c;
     display: flex;
     align-items: center;
+    max-width: 300px;
+    flex: 1 1 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.agent img, .skin img {
+.agent img, .skin img, .playercard img {
     max-width: 100px;
     border-radius: 8px;
     margin-right: 20px;
 }
 
-.agent h3, .skin h3, .account h3, .account p {
+.agent h3, .skin h3, .account h3, .account p, .playercard h3 {
     margin: 0;
     color: #ffffff;
 }
@@ -45,6 +53,10 @@ h1 {
     border-color: #4caf50;
 }
 
+.playercard {
+    border-color: #fbc02d;
+}
+
 form {
     margin-bottom: 20px;
 }
@@ -58,6 +70,10 @@ form input {
     margin-bottom: 10px;
     padding: 8px;
     width: 200px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
 }
 
 form button {
