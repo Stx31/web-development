@@ -12,13 +12,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST['usuario'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-   
     $sql = "INSERT INTO users_data (nombre, apellidos, email, telefono, fecha_nacimiento, direccion, sexo) VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$fecha_nacimiento', '$direccion', '$sexo')";
 
     if ($conn->query($sql) === TRUE) {
         $idUser = $conn->insert_id;
 
-       
         $sql_login = "INSERT INTO users_login (idUser, usuario, password, rol) VALUES ('$idUser', '$usuario', '$password', 'user')";
 
         if ($conn->query($sql_login) === TRUE) {
