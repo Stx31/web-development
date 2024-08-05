@@ -4,22 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Basics</title>
+    <title>Tweet Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            margin-right: 10px;
+            padding: 5px;
+        }
+
+        button {
+            padding: 5px 10px;
+        }
+
+        .tweet {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tweet .username {
+            font-weight: bold;
+        }
+
+        .tweet .actions button {
+            margin-left: 5px;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Form Events</h1>
+    <h1>Tweet Application</h1>
 
-    <form action="/dogs" id="tweetForm">
-        <input type="text" name="username" placeholder="username">
-        <input type="text" name="tweet" placeholder="tweet">
-        <button>Post Tweet</button>
+    <form action="/submit" id="tweetForm">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="text" name="tweet" placeholder="Tweet" required>
+        <button type="submit">Post Tweet</button>
     </form>
 
+    <div id="error" class="error"></div>
     <h2>Tweets:</h2>
-    <ul id="tweets">
-
-    </ul>
+    <ul id="tweets"></ul>
 
     <script src="app.js"></script>
 </body>
