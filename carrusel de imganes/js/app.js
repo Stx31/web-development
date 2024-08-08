@@ -1,28 +1,49 @@
-'use strict'
+'use strict';
 
-const grande = document.querySelector('.grande')
-const punto = document.querySelectorAll('.punto')
+const grande = document.querySelector('.grande');
+const punto = document.querySelectorAll('.punto');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
 
+let currentIndex = 0;
+const totalSlides = punto.length;
+const slideWidth = 100 / totalSlides;
+
+function updateCarousel(index) {
+    let operacion = index * -100;
+    grande.style.transform = `translateX(${operacion}%)`;
+    punto.forEach(p => p.classList.remove('activo'));
+    punto[index].classList.add('activo');
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel(currentIndex);
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateCarousel(currentIndex);
+}
 
 punto.forEach((cadaPunto, i) => {
+    cadaPunto.addEventListener('click', () => {
+        currentIndex = i;
+        updateCarousel(i);
+    });
+});
 
-    punto[i].addEventListener('click', () => {
-
-        let posicion = i
-
-        let operacion = posicion * -50
+nextButton.addEventListener('click', nextSlide);
+prevButton.addEventListener('click', prevSlide);
 
 
-        grande.style.transform = `translateX(${operacion}%)`
+let autoplayInterval = setInterval(nextSlide, 3000); 
+
+document.querySelector('.carrousel').addEventListener('mouseover', () => {
+    clearInterval(autoplayInterval);
+});
 
 
-        punto.forEach((cadaPunto, i) => {
-
-            punto[i].classList.remove('activo')
-        })
-
-        punto[i].classList.add('activo')
-
-    })
-})
- 
+document.querySelector('.carrousel').addEventListener('mouseleave', () => {
+    autoplayInterval = setInterval(nextSlide, 3000);
+});
