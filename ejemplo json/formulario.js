@@ -1,14 +1,20 @@
 function guardarDatos() {
-    var nombre = document.getElementById("nombre").value;
-    var edad = document.getElementById("edad").value;
-    var correo = document.getElementById("correo").value;
-    var contrasena = document.getElementById("contrasena").value;
+    const nombre = document.getElementById("nombre").value;
+    const edad = document.getElementById("edad").value;
+    const correo = document.getElementById("correo").value;
+    const contrasena = document.getElementById("contrasena").value;
+    const confirmarContrasena = document.getElementById("confirmarContrasena").value;
 
-    var datosUsuario = {
-        "nombre": nombre,
-        "edad": edad,
-        "correo": correo,
-        "contrasena": contrasena
+    if (contrasena !== confirmarContrasena) {
+        alert("Las contraseñas no coinciden.");
+        return;
+    }
+
+    const datosUsuario = {
+        nombre: nombre,
+        edad: edad,
+        correo: correo,
+        contrasena: contrasena
     };
 
     fetch('/guardar-datos', {
@@ -18,12 +24,18 @@ function guardarDatos() {
         },
         body: JSON.stringify(datosUsuario),
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error al guardar los datos');
+        }
+        return response.json();
+    })
     .then(data => {
         alert(data.message);
         document.getElementById("formulario").reset();
     })
-    .catch((error) => {
+    .catch(error => {
         console.error('Error:', error);
+        alert('Hubo un error al guardar los datos.');
     });
 }

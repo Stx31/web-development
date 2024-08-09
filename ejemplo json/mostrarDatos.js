@@ -1,18 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
     fetch('/obtener-datos')
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error en la respuesta del servidor');
+        }
+        return response.json();
+    })
     .then(data => {
         mostrarDatos(data);
     })
-    .catch((error) => {
+    .catch(error => {
         console.error('Error:', error);
+        document.getElementById('datosUsuario').innerHTML = '<p>Error al cargar los datos.</p>';
     });
 });
 
 function mostrarDatos(datos) {
     const datosUsuarioDiv = document.getElementById('datosUsuario');
 
-    if (datos.length === 0) {
+    if (!Array.isArray(datos) || datos.length === 0) {
         datosUsuarioDiv.innerHTML = '<p>No hay datos disponibles.</p>';
         return;
     }
@@ -24,7 +30,7 @@ function mostrarDatos(datos) {
                     <th>Nombre</th>
                     <th>Edad</th>
                     <th>Correo Electrónico</th>
-                    <th>Contraseña</th>
+                    <th>Contraseña</th> <!-- En producción, no se debe mostrar -->
                 </tr>
             </thead>
             <tbody>
@@ -33,7 +39,7 @@ function mostrarDatos(datos) {
                         <td>${usuario.nombre}</td>
                         <td>${usuario.edad}</td>
                         <td>${usuario.correo}</td>
-                        <td>${usuario.contrasena}</td>
+                        <td>********</td> <!-- No mostrar la contraseña real -->
                     </tr>
                 `).join('')}
             </tbody>

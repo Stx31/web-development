@@ -1,16 +1,16 @@
-// Function to get user input with validation
+
 const getUserInput = (message) => {
     while (true) {
         let input = prompt(message);
-        if (input === null) return null; // User pressed cancel
-        if (input.toLowerCase() === 'q') return 'q'; // User wants to quit
+        if (input === null) return null; 
+        if (input.toLowerCase() === 'q') return 'q';
         input = parseInt(input);
         if (!isNaN(input)) return input;
         alert("Please enter a valid number!");
     }
 };
 
-// Function to start a new game
+
 const startGame = () => {
     let maximum = getUserInput("Enter the maximum number to set the range (or 'q' to quit):");
     if (maximum === 'q' || maximum === null) {
@@ -43,7 +43,7 @@ const startGame = () => {
         }
     }
 
-    // Prompt for a new game
+   
     if (confirm("Do you want to play again?")) {
         startGame();
     } else {
@@ -51,5 +51,4 @@ const startGame = () => {
     }
 };
 
-// Start the game when the script is loaded
 startGame();
