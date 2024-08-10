@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     form.addEventListener('change', calculateTotal);
     form.addEventListener('reset', () => {
-        setTimeout(calculateTotal, 0); 
+        setTimeout(calculateTotal, 0);
     });
 
-    calculateTotal(); 
+    calculateTotal();
 });

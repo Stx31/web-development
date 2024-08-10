@@ -1,26 +1,37 @@
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Encabezado */
 header {
     background-color: #333;
-    color: white;
-    padding: 10px 0;
+    color: #fff;
+    padding: 15px 0;
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 1000;
 }
 
-header .logo {
-    float: left;
-    margin-left: 20px;
+header .logo img {
+    height: 40px;
+    vertical-align: middle;
 }
 
 header nav {
     float: right;
-    margin-right: 20px;
 }
 
 header nav ul {
@@ -30,36 +41,157 @@ header nav ul {
 }
 
 header nav ul li {
-    display: inline;
-    margin-left: 20px;
+    display: inline-block;
+    margin-left: 30px;
 }
 
 header nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
-header nav ul li a.active {
-    font-weight: bold;
+header nav ul li a.active,
+header nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* Secciones */
 main {
-    padding: 80px 20px 20px 20px;
+    padding-top: 100px;
 }
 
+section {
+    padding: 60px 0;
+}
+
+.bg-light {
+    background-color: #f9f9f9;
+}
+
+.bg-dark {
+    background-color: #333;
+    color: #fff;
+}
+
+#services .service-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+#services .service-cards .card {
+    flex-basis: 30%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#services .service-cards .card h3 {
+    margin-top: 0;
+}
+
+#gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#gallery-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulario de presupuesto */
+#quote-form fieldset {
+    border: none;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+#quote-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#quote-form input,
+#quote-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#quote-form input[type="checkbox"] {
+    width: auto;
+}
+
+#total {
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-reset {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover, .btn-reset:hover {
+    opacity: 0.9;
+}
+
+/* Pie de página */
 footer {
     background-color: #333;
-    color: white;
-    padding: 20px 0;
+    color: #fff;
     text-align: center;
+    padding: 30px 0;
     position: fixed;
-    width: 100%;
     bottom: 0;
+    width: 100%;
 }
 
 footer .social a {
-    color: white;
-    margin: 0 10px;
+    color: #fff;
+    margin: 0 15px;
     text-decoration: none;
+}
+
+footer .address, footer .legal {
+    margin-top: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    #services .service-cards {
+        flex-direction: column;
+    }
+
+    header nav {
+        float: none;
+        text-align: center;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
 }
