@@ -179,7 +179,7 @@ footer .address, footer .legal {
     margin-top: 10px;
 }
 
-/* Responsividad */
+
 @media (max-width: 768px) {
     #services .service-cards {
         flex-direction: column;

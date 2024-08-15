@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <div class="logo">Tienda teclados</div>
+        <div class="logo">Tienda Teclados</div>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -22,7 +22,7 @@
     <main>
         <section id="quote">
             <h1>Solicitud de Presupuesto</h1>
-            <form id="quote-form">
+            <form id="quote-form" aria-labelledby="quote">
                 <fieldset>
                     <legend>Datos de Contacto</legend>
                     <label for="name">Nombre:</label>
@@ -32,7 +32,7 @@
                     <input type="text" id="surname" name="surname" maxlength="40" required>
                     
                     <label for="phone">Teléfono:</label>
-                    <input type="text" id="phone" name="phone" maxlength="9" required>
+                    <input type="tel" id="phone" name="phone" maxlength="9" pattern="[0-9]{9}" required>
                     
                     <label for="email">Correo electrónico:</label>
                     <input type="email" id="email" name="email" required>
@@ -52,13 +52,25 @@
                     <input type="number" id="duration" name="duration" value="1" min="1">
                     
                     <label>Extras:</label>
-                    <label><input type="checkbox" class="extra" value="50"> Extra 1 - 50€</label>
-                    <label><input type="checkbox" class="extra" value="30"> Extra 2 - 30€</label>
-                    <label><input type="checkbox" class="extra" value="20"> Extra 3 - 20€</label>
+                    <div>
+                        <input type="checkbox" class="extra" id="extra1" value="50">
+                        <label for="extra1">Extra 1 - 50€</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="extra" id="extra2" value="30">
+                        <label for="extra2">Extra 2 - 30€</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="extra" id="extra3" value="20">
+                        <label for="extra3">Extra 3 - 20€</label>
+                    </div>
                     
                     <div id="total">Presupuesto Total: <span id="total-amount">0</span>€</div>
                     
-                    <label><input type="checkbox" id="terms" required> Acepto las condiciones de privacidad</label>
+                    <div>
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">Acepto las condiciones de privacidad</label>
+                    </div>
                     
                     <button type="submit">Enviar</button>
                     <button type="reset">Resetear</button>
@@ -69,14 +81,13 @@
 
     <footer>
         <div class="social">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="Twitter">Twitter</a>
+            <a href="#" aria-label="Instagram">Instagram</a>
         </div>
         <div class="address">Dirección de la empresa</div>
         <div class="legal">Aviso legal</div>
     </footer>
-    
-    <script src="js/script.js"></script>
+    <script src="/js/"></script>
 </body>
 </html>
