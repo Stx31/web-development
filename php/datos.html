@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de LocalStorage con PHP</title>
+</head>
+<body>
+
+    <h2>Bienvenido</h2>
+
+    <p id="mensaje"></p>
+
+    <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+    <button onclick="guardarEnLocalStorage()">Guardar Nombre</button>
+
+    <script>
+        function guardarEnLocalStorage() {
+            const nombre = document.getElementById('nombre').value;
+            localStorage.setItem('nombreUsuario', nombre);
+            mostrarMensaje();
+        }
+
+        function mostrarMensaje() {
+            const nombre = localStorage.getItem('nombreUsuario');
+            if (nombre) {
+                document.getElementById('mensaje').innerText = 'Hola, ' + nombre + '!';
+            } else {
+                document.getElementById('mensaje').innerText = 'Por favor, ingresa tu nombre.';
+            }
+        }
+
+        
+        mostrarMensaje();
+    </script>
+
+</body>
+</html>

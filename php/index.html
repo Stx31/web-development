@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo PHP y LocalStorage</title>
+</head>
+<body>
+
+    <h2>Guardar Datos en LocalStorage</h2>
+
+    <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+    <button onclick="guardarEnLocalStorage()">Guardar en LocalStorage</button>
+    <button onclick="enviarAlServidor()">Enviar al Servidor</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function guardarEnLocalStorage() {
+            const nombre = document.getElementById('nombre').value;
+            localStorage.setItem('nombreUsuario', nombre);
+            document.getElementById('resultado').innerText = 'Nombre guardado en localStorage';
+        }
+
+        function enviarAlServidor() {
+            const nombre = localStorage.getItem('nombreUsuario');
+            if (nombre) {
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', 'procesar.php', true);
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        document.getElementById('resultado').innerText = xhr.responseText;
+                    }
+                };
+                xhr.send('nombre=' + encodeURIComponent(nombre));
+            } else {
+                document.getElementById('resultado').innerText = 'No hay datos en localStorage';
+            }
+        }
+    </script>
+
+</body>
+</html>
