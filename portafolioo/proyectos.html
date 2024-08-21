@@ -8,21 +8,47 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+    <div id="starfield"></div>
+
     <div class="container my-5">
         <h1 class="text-center">Proyectos</h1>
         <div class="row">
             <div class="col-md-6">
-                <h3>Proyecto 1: Gestión de Tareas</h3>
-                <p>Descripción del proyecto: Desarrollo de una aplicación móvil para la gestión de tareas diarias utilizando React Native y Firebase.</p>
+                <div class="project-container">
+                    <img src="ruta_de_la_imagen_proyecto1.jpg" alt="Proyecto 1" class="project-image">
+                    <div class="project-description">
+                        <h3>Proyecto 1: Gestión de Tareas</h3>
+                        <p>Descripción del proyecto: Desarrollo de una aplicación móvil para la gestión de tareas diarias utilizando React Native y Firebase.</p>
+                    </div>
+                </div>
             </div>
             <div class="col-md-6">
-                <h3>Proyecto 2: Portafolio Personal</h3>
-                <p>Descripción del proyecto: Creación de un sitio web de portafolio personal utilizando HTML, CSS, y JavaScript.</p>
+                <div class="project-container">
+                    <img src="ruta_de_la_imagen_proyecto2.jpg" alt="Proyecto 2" class="project-image">
+                    <div class="project-description">
+                        <h3>Proyecto 2: Portafolio Personal</h3>
+                        <p>Descripción del proyecto: Creación de un sitio web de portafolio personal utilizando HTML, CSS, y JavaScript.</p>
+                    </div>
+                </div>
             </div>
             <!-- Puedes añadir más proyectos aquí -->
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Generar estrellas en el fondo
+        const starfield = document.getElementById('starfield');
+        const numStars = 100;
+
+        for (let i = 0; i < numStars; i++) {
+            let star = document.createElement('div');
+            star.className = 'star';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.animationDuration = (Math.random() * 5 + 3) + 's';
+            starfield.appendChild(star);
+        }
+    </script>
 </body>
 </html>
