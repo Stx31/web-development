@@ -1,4 +1,32 @@
-@import 'reset/variables', 'reset/mixins', 'reset/reset', 'reset/keyframes';
+@import 'reset/variables';
+@import 'reset/mixins';
+@import 'reset/reset';
+@import 'reset/keyframes';
+
+.carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-indicators li {
+    background-color: lightgray;
+}
+
+.carousel-indicators .active {
+    background-color: lightblue;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
 
 .carrousel {
     width: 90%;
@@ -6,6 +34,7 @@
     padding: 2em;
     overflow: hidden;
     position: relative;
+    margin: auto;
 }
 
 .carrousel .grande {
@@ -34,28 +63,4 @@
     border-radius: 50%;
     background-color: gray;
     cursor: pointer;
-}
-
-.carrousel .punto.activo {
-    background-color: lightblue;
-}
-
-.carrousel .control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 0.5em;
-    z-index: 10;
-}
-
-.carrousel .control.prev {
-    left: 0;
-}
-
-.carrousel .control.next {
-    right: 0;
 }
