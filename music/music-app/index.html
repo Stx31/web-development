@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Música</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="music-player">
+        <h1>Reproductor de Música</h1>
+        <audio id="audio-player" src="tu-cancion.mp3"></audio>
+        <div class="controls">
+            <button id="prev">⏮️</button>
+            <button id="play-pause">▶️</button>
+            <button id="next">⏭️</button>
+        </div>
+        <div class="progress-container">
+            <div id="progress"></div>
+        </div>
+        <p id="current-time">00:00</p>
+        <p id="total-time">00:00</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
