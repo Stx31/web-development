@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruleta de Números</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .ruleta {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .numero {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .verde {
+            color: green;
+        }
+        .rojo {
+            color: red;
+        }
+        .negro {
+            color: black;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="ruleta">
+    <h1>Ruleta de Números</h1>
+
+    <?php
+        // Generar un número aleatorio entre 0 y 36
+        $numero = rand(0, 36);
+
+        // Determinar el color basado en el número
+        $color = '';
+        if ($numero == 0) {
+            $color = 'verde'; // El 0 es verde
+        } elseif (in_array($numero, [1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36])) {
+            $color = 'rojo'; // Números rojos
+        } else {
+            $color = 'negro'; // Números negros
+        }
+
+        // Mostrar el número y color en pantalla
+        echo "<div class='numero $color'>El número de la ruleta es: $numero</div>";
+    ?>
+
+    
+    <button onclick="window.location.reload();">Girar Ruleta</button>
+</div>
+
+</body>
+</html>
