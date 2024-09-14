@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Notas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .note-form {
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="file"] {
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        .image-preview {
+            margin-top: 20px;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="note-form">
+        <h2>Crear Nota</h2>
+        <form id="noteForm">
+            <label for="title">Título:</label>
+            <input type="text" id="title" name="title" placeholder="Escribe el título..." required>
+
+            <label for="content">Contenido:</label>
+            <textarea id="content" name="content" rows="6" placeholder="Escribe el contenido de la nota..." required></textarea>
+
+            <label for="image">Subir Imagen:</label>
+            <input type="file" id="image" accept="image/*" onchange="previewImage(event)">
+
+            <div>
+                <img id="imagePreview" class="image-preview" alt="Previsualización de la imagen" style="display: none;">
+            </div>
+
+            <button type="submit">Guardar Nota</button>
+        </form>
+    </div>
+
+    <script>
+        function previewImage(event) {
+            const file = event.target.files[0];
+            const preview = document.getElementById('imagePreview');
+            
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        document.getElementById('noteForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+
+            alert(`Nota guardada:\nTítulo: ${title}\nContenido: ${content}`);
+        });
+    </script>
+
+</body>
+</html>
