@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Store - Inicio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="js/news.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content container">
+            <img src="images/icon.png" alt="One Store Logo" class="header-logo">
+            <h1>One Store</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="views/galeria.html">Galería</a></li>
+                    <li><a href="views/presupuesto.html">Presupuesto</a></li>
+                    <li><a href="views/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content container">
+            <h2>Bienvenidos a One Store</h2>
+            <p>¡Explora nuestros productos inspirados en el mundo de One Piece!</p>
+        </div>
+        <img src="images/hero_image.jpg" alt="Hero Image" class="hero-image">
+    </section>
+
+    <main>
+        <section id="news" class="container">
+            <h2>Últimas Noticias</h2>
+            <div id="news-container">
+                <!-- Noticias cargadas dinámicamente desde news.js -->
+            </div>
+        </section>
+
+        <section id="products" class="container">
+            <h2>Productos Destacados</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="images/libro.jpg" alt="Producto 1">
+                    <h3>Producto 1</h3>
+                    <p>Descripción breve del producto.</p>
+                    <p><strong>Precio:</strong> $19.99</p>
+                </div>
+                <div class="product">
+                    <img src="images/llavero.jpg" alt="Producto 2">
+                    <h3>Producto 2</h3>
+                    <p>Descripción breve del producto.</p>
+                    <p><strong>Precio:</strong> $29.99</p>
+                </div>
+                <div class="product">
+                    <img src="images/taza.jpg" alt="Producto 3">
+                    <h3>Producto 3</h3>
+                    <p>Descripción breve del producto.</p>
+                    <p><strong>Precio:</strong> $39.99</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="special-offers" class="container">
+            <h2>Ofertas Especiales</h2>
+            <div class="offer-grid">
+                <div class="offer">
+                    <h3>Descuento del 20% en productos seleccionados</h3>
+                    <p>Aprovecha nuestras ofertas especiales en productos seleccionados. ¡No te lo pierdas!</p>
+                    <img src="images/Designer.jpeg" alt="Oferta Especial 1">
+                </div>
+                <div class="offer">
+                    <h3>Compra 2, lleva 3</h3>
+                    <p>Compra dos productos y obtén el tercero gratis. Consulta las condiciones en la tienda.</p>
+                    <img src="images/2x3.jpeg" alt="Oferta Especial 2">
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="container">
+            <h2>Testimonios de Clientes</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>"Excelente tienda con productos de calidad. ¡Siempre encuentro lo que busco!"</p>
+                    <p><strong>- Juan Pérez</strong></p>
+                </div>
+                <div class="testimonial">
+                    <p>"La atención al cliente es fantástica y las ofertas son inmejorables."</p>
+                    <p><strong>- María López</strong></p>
+                </div>
+                <div class="testimonial">
+                    <p>"Los productos son auténticos y de gran calidad. Recomendado al 100%."</p>
+                    <p><strong>- Roberto García</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="newsletter" class="container">
+            <h2>Suscríbete a nuestro Boletín</h2>
+            <p>Recibe las últimas noticias, ofertas y novedades directamente en tu correo electrónico.</p>
+            <form action="subscribe.php" method="post">
+                <input type="email" name="email" placeholder="Introduce tu correo electrónico" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+        </section>
+
+        <section id="about" class="container">
+            <h2>Sobre Nosotros</h2>
+            <p>En One Store, te ofrecemos los mejores productos inspirados en el universo de One Piece. ¡Navega por nuestra tienda y encuentra lo que más te guste!</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content container">
+            <p>© 2024 One Store. Todos los derechos reservados.</p>
+            <div class="social-media">
+                <a href="https://twitter.com/OneStore" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="https://facebook.com/OneStore" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="https://instagram.com/OneStore" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+            </div>
+            <p><a href="legal.html">Aviso legal</a></p>
+        </div>
+    </footer>
+</body>
+</html>

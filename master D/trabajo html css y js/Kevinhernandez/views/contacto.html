@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Store - Contacto</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+
+        #contact-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #contact-info h2 {
+            margin-top: 0;
+        }
+
+        #contact-info p {
+            margin: 10px 0;
+        }
+
+        #contact-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        #contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            
+            var storeLocation = { lat: 35.6895, lng: 139.6917 }; 
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 14,
+                center: storeLocation
+            });
+
+            var marker = new google.maps.Marker({
+                position: storeLocation,
+                map: map,
+                title: 'One Store'
+            });
+
+            var directionsService = new google.maps.DirectionsService();
+            var directionsRenderer = new google.maps.DirectionsRenderer();
+            directionsRenderer.setMap(map);
+
+            document.getElementById('get-directions').addEventListener('click', function() {
+                var destination = document.getElementById('address').value;
+                var request = {
+                    origin: storeLocation,
+                    destination: destination,
+                    travelMode: 'DRIVING'
+                };
+
+                directionsService.route(request, function(result, status) {
+                    if (status === 'OK') {
+                        directionsRenderer.setDirections(result);
+                    }
+                });
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>One Store</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="/views/galeria.html">Galería</a></li>
+                <li><a href="/views/presupuesto.html">Presupuesto</a></li>
+                <li><a href="/views/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="map">
+         
+        </section>
+
+        <section id="contact-info">
+            <h2>Contacto</h2>
+            <p>Dirección: 123 Calle Ejemplo, Tokio, Japón</p>
+            <p>Teléfono: +81 3-1234-5678</p>
+            <p>Email: <a href="mailto:info@onestore.jp">info@onestore.jp</a></p>
+
+            <h3>Obtener Direcciones</h3>
+            <input type="text" id="address" placeholder="Introduce tu dirección">
+            <button id="get-directions">Obtener Direcciones</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 One Store. Todos los derechos reservados.</p>
+        <p><a href="https://twitter.com/OneStore" target="_blank">Twitter</a> | <a href="https://facebook.com/OneStore" target="_blank">Facebook</a> | <a href="https://instagram.com/OneStore" target="_blank">Instagram</a></p>
+    </footer>
+</body>
+</html>
