@@ -1,19 +1,26 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const newsContainer = document.getElementById('news-container');
-    
-    fetch('news.json')
-        .then(response => response.json())
-        .then(newsItems => {
-            newsItems.forEach(item => {
-                const newsItem = document.createElement('div');
-                newsItem.classList.add('news-item');
-                newsItem.innerHTML = `
-                    <h3>${item.title}</h3>
-                    <p>${item.description}</p>
-                    <small>${item.date}</small>
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('noticias.json') 
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al cargar el archivo JSON');
+            }
+            return response.json();
+        })
+        .then(data => {
+            const testimoniosContainer = document.querySelector('.testimonial-grid');
+            testimoniosContainer.innerHTML = ''; 
+
+            data.testimonios.forEach(testimonio => {
+                const testimonialDiv = document.createElement('div');
+                testimonialDiv.classList.add('testimonial');
+                testimonialDiv.innerHTML = `
+                    <p>"${testimonio.texto}"</p>
+                    <p><strong>- ${testimonio.autor}</strong></p>
                 `;
-                newsContainer.appendChild(newsItem);
+                testimoniosContainer.appendChild(testimonialDiv);
             });
         })
-        .catch(error => console.error('Error loading news:', error));
+        .catch(error => {
+            console.error('Error al cargar los testimonios:', error);
+        });
 });
