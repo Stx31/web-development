@@ -1,0 +1,16 @@
+{
+  "testimonios": [
+    {
+      "texto": "Increíble tienda, el servicio fue excelente y los productos me encantan.",
+      "autor": "Carlos Santana"
+    },
+    {
+      "texto": "Nunca había visto tanta variedad de productos de One Piece. ¡Espectacular!",
+      "autor": "Ana Gómez"
+    },
+    {
+      "texto": "Los precios son bastante accesibles y el envío rápido. ¡Volveré a comprar!",
+      "autor": "Luis Fernández"
+    }
+  ]
+}
